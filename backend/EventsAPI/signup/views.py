@@ -6,7 +6,7 @@ from rest_framework import status
 from signup.models import user
 from signup.serializers import user
 from rest_framework.decorators import api_view
-from .serializers import SignupSerializer, UserLoginSerializer, UserLogoutSerializer
+from .serializers import UserSerializer, UserLoginSerializer, UserLogoutSerializer
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 from rest_framework.response import Response
 from django.shortcuts import redirect
@@ -14,6 +14,12 @@ from rest_framework import generics
 
 
 # Create your views here.
+
+
+class Signup(generics.ListCreateAPIView):
+    # get method handler
+    queryset = user.objects.all()
+    serializer_class = UserSerializer
 
 @api_view(['GET','POST'])
 def user_list(request):
@@ -35,6 +41,9 @@ def user_list(request):
                 user_serializer.save()
                 return JsonResponse(user_serializer.data, status=status.HTTP_201_CREATED)
             return JsonResponse(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
 
 
 

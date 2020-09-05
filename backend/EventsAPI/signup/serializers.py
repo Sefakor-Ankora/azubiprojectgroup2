@@ -8,7 +8,7 @@ from uuid import uuid4
 
 
 
-class SignupSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = user
