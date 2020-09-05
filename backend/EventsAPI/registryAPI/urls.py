@@ -5,6 +5,10 @@ from signup.views import index
 
 urlpatterns = [
         path('admin/', admin.site.urls),
-        url(r'^', include('signup.urls')),
+        path('api/', include('signup.urls')),
         path('', index, name="index"),
+
+
+        
+        #url(r'^', include('signup.urls')),
 ]

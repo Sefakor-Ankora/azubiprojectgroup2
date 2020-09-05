@@ -1,15 +1,28 @@
-from django.conf.urls import url
-from signup import views
 from django.urls import path
-from .views import  Login, Logout
-
+from .views import signup, Login, Logout
 
 urlpatterns = [
-    url(r'^api/signup$', views.user_list),
-    url(r'^api/signup/(?P<pk>[0-9]+)$', views.user_details)
-    #url(r'^api/signup$', views.Login_list),
-    #url(r'^api/signup/(?P<pk>[0-9]+)$', views.login_details)
-    #url(r'^api/signup$', views.Logout_list),
-    #url(r'^api/signup/(?P<pk>[0-9]+)$', views.logout_details)
-    
+    path('signup/', signup.as_view(), name="register"),
+    path('login/', Login.as_view(), name="login"),
+    path('logout/', Logout.as_view(), name="logout"),
 ]
+
+
+
+
+
+
+
+
+#
+#from django.conf.urls import url
+#from signup import views
+#from django.urls import path
+#from .views import  Login, Logout
+#
+#urlpatterns = [
+#    url(r'^api/signup$', views.user_list),
+#    url(r'^api/signup/(?P<pk>[0-9]+)$', views.user_details)
+    
+    
+#]
