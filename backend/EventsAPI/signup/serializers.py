@@ -24,28 +24,28 @@ class UserLoginSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         # user,email,password validator
-        user_id = data.get("user_id", None)
-        password = data.get("password", None)
+        user_id = data.get("user_id")
+        password = data.get("password")
         if not user_id and not password:
             raise ValidationError("Details not entered.")
         user = None
         # if the email has been passed
         if '@' in user_id:
-            user = User.objects.filter(
+            user = user.objects.filter(
                 Q(email=user_id) &
                 Q(password=password)
                 ).distinct()
             if not user.exists():
                 raise ValidationError("User credentials are not correct.")
-            user = User.objects.get(email=user_id)
+            user = user.objects.get(email=user_id)
         else:
-            user = Users.objects.filter(
+            user = user.objects.filter(
                 Q(username=user_id) &
                 Q(password=password)
             ).distinct()
             if not user.exists():
                 raise ValidationError("User credentials are not correct.")
-            user = User.objects.get(username=user_id)
+            user = user.objects.get(username=user_id)
         if user.ifLogged:
             raise ValidationError("User already logged in.")
         user.ifLogged = True
@@ -76,7 +76,7 @@ class UserLogoutSerializer(serializers.ModelSerializer):
         print(token)
         user = None
         try:
-            user = User.objects.get(token=token)
+            user = user.objects.get(token=token)
             if not user.ifLogged:
                 raise ValidationError("User is not logged in.")
         except Exception as e:

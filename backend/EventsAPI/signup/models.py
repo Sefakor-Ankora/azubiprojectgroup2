@@ -8,7 +8,7 @@ class user(models.Model):
     lastname = models.CharField(max_length=50, blank = False, default = "")
     email = models.EmailField(blank=False, default = "")
     username = models.CharField(max_length=50, blank=False, default = "")
-    Password = models.CharField(max_length=32, validators=[MinLengthValidator(8)],)
+    password = models.CharField(max_length=32, validators=[MinLengthValidator(8)],)
     ifLogged = models.BooleanField(default=False)
     token = models.CharField(max_length=500, null=True, default="")
 
