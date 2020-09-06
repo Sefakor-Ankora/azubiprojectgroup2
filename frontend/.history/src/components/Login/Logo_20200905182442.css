@@ -1,0 +1,8 @@
+/* logo diplay and position */
+.Tilt {
+      background: linear-gradient89deg, #FF5EDF 0%, #04C8DE 100%);
+      position: absolute;
+      padding: 0%;
+      margin: 0%;
+      margin-top: '1rem';
+}
