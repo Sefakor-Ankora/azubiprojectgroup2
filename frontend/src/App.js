@@ -13,7 +13,7 @@ const App = () => {
 const particlesOptions = {          //created a function for the background
   particles: {
     number: {
-      value: 150,
+      value: 100,
       density: true,
       enable: 800
     }

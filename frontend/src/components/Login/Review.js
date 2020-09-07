@@ -10,41 +10,64 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 
 import EditIcon from  '@material-ui/icons/Edit';
+import Axios from "axios";
+ 
 
 
 export const Review = ({formData, navigation}) => {
   const { go } = navigation;
+  
 
   const {
       email,
       password,
-      confirmPassword,
-      firstName,
-      lastName,
-      address,
-      city,
-      phoneNumber,
+      // confirmPassword,
+      firstname,
+      lastname,
+      username,
+      // address,
+      // city,
+      // phoneNumber,
   } = formData;
+
+const handleSubmit = (e) => {
+  // e.preventDefault()
+  console.log(formData)
+
+  Axios.post('http://127.0.0.1:8000/api/signup/', 
+    formData
+)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+}
+
+
   return (
     < Container maxWidth = 'xs'
     className = "br3 ba b--black-10 mv8 w-100 w-50-m w-25-l mw6 shadow-8 center" >
          <h2>Review</h2>
          <RenderAccordion summary="Register" go={ go } details ={[
-           { 'First Name': firstName },
-           { 'Last Name': lastName },
+           { 'First name': firstname },
+           { 'Last name': lastname },
            { 'Email': email },
            { 'Password': password },
-           { 'Confirm Password': confirmPassword },
+           { 'username': username },
+          //  { 'Confirm Password': confirmPassword },
 
            ]} />
 
-           <RenderAccordion summary="Address" go={ go } details ={[
+           {/* <RenderAccordion summary="Address" go={ go } details ={[
            { 'Address': address },
            { 'City': city },
            { 'Phone Number': phoneNumber },
         
       
-           ]} />
+           ]} /> */}
 
            <div>
               <input
@@ -52,7 +75,7 @@ export const Review = ({formData, navigation}) => {
                 type="submit"
                 value="Submit"
                 style={{marginTop: '1.5rem'}}
-                 onClick={() => navigation.next()}
+                 onClick={() => handleSubmit()}
               />
            </div>
 
@@ -62,6 +85,9 @@ export const Review = ({formData, navigation}) => {
   
   );
 }
+
+
+
 
 export const RenderAccordion = ({ summary, details, go }) => (
   <Accordion>

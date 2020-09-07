@@ -1,9 +1,33 @@
 import React from 'react';
+import Axios from "axios";
+
+
+
+
+
 
 
 export const Signin = ({ formData, setForm, navigation }) => {
   // called the function to use to created the forms
   const {email, password} = formData;
+
+const handleSubmit = (e) => {
+  // e.preventDefault()
+   console.log(email, password)
+
+  Axios.post('http://127.0.0.1:8000/api/login/',
+      { email, password}
+    )
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+}
+
+
   return (
     <div>
       {
@@ -43,6 +67,9 @@ export const Signin = ({ formData, setForm, navigation }) => {
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Sign in"
+                onClick = {
+                  () => handleSubmit()
+                }
               />
               {
                 /* click on event, allows you to move to the next page */ }

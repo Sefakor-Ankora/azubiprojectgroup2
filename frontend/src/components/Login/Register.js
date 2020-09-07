@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Register = ({ formData, setForm, navigation }) => {
   //called the function to use to created the forms
-  const {firstName,lastName,email,password,confirmPassword} = formData;
+  const {firstname,lastname,email,password,username} = formData;
   return (
     <div>
       {/* created the signup inputs with inline styling */}
@@ -12,25 +12,25 @@ export const Register = ({ formData, setForm, navigation }) => {
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend className="f1 fw6 ph0 mh0">Registration</legend>
               <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="firstName">first Name</label>
+                <label className="db fw6 lh-copy f6" htmlFor="firstname">First Name</label>
                 <input
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="firstName"
-                  name="firstName"
-                  id="firstName"
-                  value= {firstName}
+                  type="firstname"
+                  name="firstname"
+                  id="firstname"
+                  value= {firstname}
                   required={true}
                   onChange={setForm}
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="lastName">Last Name</label>
+                <label className="db fw6 lh-copy f6" htmlFor="lastname">Last Name</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="lastName"
-                  name="lastName"
-                  id="lastName"
-                  value= {lastName}
+                  type="lastname"
+                  name="lastname"
+                  id="lastname"
+                  value= {lastname}
                   required={true}
                   onChange={setForm}
                 />
@@ -48,25 +48,25 @@ export const Register = ({ formData, setForm, navigation }) => {
                 />
               </div>
                 <div className="mv3">
+                <label className="db fw6 lh-copy f6" htmlFor="username">Username</label>
+                <input
+                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                  type="username"
+                  name="username"
+                  id="username"
+                  value= {username}
+                  required={true}
+                  onChange={setForm}
+                />
+              </div>
+                <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
                   id="password"
-                  password= {password}
-                  required={true}
-                  onChange={setForm}
-                />
-              </div>
-                <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="confirmPassword">Confirm Password</label>
-                <input
-                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="Password"
-                  name="Password"
-                  id="Password"
-                  value= {confirmPassword}
+                  value= {password}
                   required={true}
                   onChange={setForm}
                 />
