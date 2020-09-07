@@ -19,14 +19,14 @@ class UserSerializer(serializers.ModelSerializer):
 
 class UserLoginSerializer(serializers.ModelSerializer):
     # to accept either username or email
-    user_id = serializers.CharField()
+    email = serializers.CharField()
     password = serializers.CharField()
     token = serializers.CharField(required=False, read_only=True)
 
     class Meta:
         model = user
         fields = (
-            'user_id',
+            'email',
             'password',
             'token',
         )

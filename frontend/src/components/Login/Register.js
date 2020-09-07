@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Register = ({ formData, setForm, navigation }) => {
   //called the function to use to created the forms
-  const {firstname,lastname,email,password,username} = formData;
+  const {firstname,lastname,city,phonenumber,address} = formData;
   return (
     <div>
       {/* created the signup inputs with inline styling */}
@@ -12,7 +12,7 @@ export const Register = ({ formData, setForm, navigation }) => {
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend className="f1 fw6 ph0 mh0">Registration</legend>
               <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="firstname">First Name</label>
+                <label className="db fw6 lh-copy f6" htmlFor="firstname">Firstname</label>
                 <input
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="firstname"
@@ -24,7 +24,7 @@ export const Register = ({ formData, setForm, navigation }) => {
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="lastname">Last Name</label>
+                <label className="db fw6 lh-copy f6" htmlFor="lastname">Lastname</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="lastname"
@@ -36,37 +36,37 @@ export const Register = ({ formData, setForm, navigation }) => {
                 />
               </div>
                 <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="email">Email</label>
+                <label className="db fw6 lh-copy f6" htmlFor="address">Address</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="email"
-                  name="email"
-                  id="email"
-                  value= {email}
+                  type="address"
+                  name="address"
+                  id="address"
+                  value= {address}
                   required={true}
                   onChange={setForm}
                 />
               </div>
                 <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="username">Username</label>
+                <label className="db fw6 lh-copy f6" htmlFor="city">City</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="username"
-                  name="username"
-                  id="username"
-                  value= {username}
+                  type="city"
+                  name="city"
+                  id="city"
+                  value= {city}
                   required={true}
                   onChange={setForm}
                 />
               </div>
                 <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+                <label className="db fw6 lh-copy f6" htmlFor="password">Phonenumber</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="password"
-                  name="password"
-                  id="password"
-                  value= {password}
+                  type="phonenumber"
+                  name="phonenumber"
+                  id="phonenumber"
+                  value= {phonenumber}
                   required={true}
                   onChange={setForm}
                 />

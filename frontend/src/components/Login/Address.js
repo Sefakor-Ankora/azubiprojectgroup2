@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 
 export const Address = ({ formData, setForm, navigation }) => {
-  const {address,city,phoneNumber} = formData;
+  const {email,password,confirmpassword} = formData;
   return (
        <div>
        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
@@ -12,37 +12,37 @@ export const Address = ({ formData, setForm, navigation }) => {
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend className="f1 fw6 ph0 mh0">Registration</legend>
               <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="address">Address</label>
+                <label className="db fw6 lh-copy f6" htmlFor="email">Email</label>
                 <input
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="address"
-                  name="address"
-                  id="address"
-                  value= {address}
+                  type="email"
+                  name="email"
+                  id="email"
+                  value= {email}
                   required={true}
                   onChange={setForm}
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="city">city</label>
+                <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="city"
-                  name="city"
-                  id="city"
-                  value= {city}
+                  type="password"
+                  name="password"
+                  id="password"
+                  value= {password}
                   required={true}
                   onChange={setForm}
                 />
               </div>
                 <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="phoneNumber">Phone Number</label>
+                <label className="db fw6 lh-copy f6" htmlFor="confirmpassword">Confirm Password</label>
                 <input
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="phoneNumber"
-                  name="phoneNumber"
-                  id="phoneNumber"
-                  value= {phoneNumber}
+                  type="password"
+                  name="confirmpassword"
+                  id="password"
+                  value= {confirmpassword}
                   required={true}
                   onChange={setForm}
                 />

@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import IconButton from '@material-ui/core/IconButton';
 
 import EditIcon from  '@material-ui/icons/Edit';
-import Axios from "axios";
+import axios from "axios";
  
 
 
@@ -21,20 +21,19 @@ export const Review = ({formData, navigation}) => {
   const {
       email,
       password,
-      // confirmPassword,
+      confirmpassword,
       firstname,
       lastname,
-      username,
-      // address,
-      // city,
-      // phoneNumber,
+      address,
+      city,
+      phonenumber,
   } = formData;
 
 const handleSubmit = (e) => {
   // e.preventDefault()
   console.log(formData)
 
-  Axios.post('http://127.0.0.1:8000/api/signup/', 
+  axios.post('http://127.0.0.1:8000/api/signup/',
     formData
 )
     .then(function (response) {
@@ -54,20 +53,22 @@ const handleSubmit = (e) => {
          <RenderAccordion summary="Register" go={ go } details ={[
            { 'First name': firstname },
            { 'Last name': lastname },
-           { 'Email': email },
-           { 'Password': password },
-           { 'username': username },
-          //  { 'Confirm Password': confirmPassword },
+           { 'Address': address },
+           { 'city': city },
+           { 'phonenumber': phonenumber },
+        
+
+
 
            ]} />
 
-           {/* <RenderAccordion summary="Address" go={ go } details ={[
-           { 'Address': address },
-           { 'City': city },
-           { 'Phone Number': phoneNumber },
+           <RenderAccordion summary="Address" go={ go } details ={[
+           { 'email': email },
+           { 'password': password },
+           { 'confirmpassword': confirmpassword },
         
       
-           ]} /> */}
+           ]} />
 
            <div>
               <input

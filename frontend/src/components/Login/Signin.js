@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from "axios";
+import axios from "axios";
 
 
 
@@ -15,7 +15,7 @@ const handleSubmit = (e) => {
   // e.preventDefault()
    console.log(email, password)
 
-  Axios.post('http://127.0.0.1:8000/api/login/',
+  axios.post('http://127.0.0.1:8000/api/login/',
       { email, password}
     )
     .then(function (response) {
