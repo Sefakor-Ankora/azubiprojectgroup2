@@ -28,7 +28,15 @@ class UserLoginSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = user
+<<<<<<< HEAD
         fields = ('email', 'password', 'token', )
+=======
+        fields = (
+            'email',
+            'password',
+            'token',
+        )
+>>>>>>> a4f5ef220e8383bf7e3579c7368669cb4c218f0f
 
         read_only_fields = (
             'token',

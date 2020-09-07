@@ -15,14 +15,14 @@ import {
   
 //default data for inputs
 const defaultData = {
-  firstName: '',
-  lastName: '',
+  firstname: '',
+  lastname: '',
   email: '',
   password: '',
-  confirmPassword: '',
+  confirmpassword: '',
   address: '',
  city: '',
- phoneNumber: '',
+ phonenumber: '',
 };
 //created an id for the steps
 const steps = [
