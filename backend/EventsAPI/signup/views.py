@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from django.shortcuts import redirect
 from rest_framework import generics
 
-
+from rest_framework.authtoken.models import Token
 # Create your views here.
 
 
