@@ -6,9 +6,12 @@ from django.core.validators import MinLengthValidator
 class user(models.Model):
     firstname = models.CharField(max_length=50, blank = False, default = "")
     lastname = models.CharField(max_length=50, blank = False, default = "")
+    address = models.CharField(max_length=50, blank = False, default = "")
+    city = models.CharField(max_length=50, blank = False, default = "")
+    phonenumber = models.CharField(max_length=50, blank = False, default = "")
     email = models.EmailField(blank=False, default = "")
-    username = models.CharField(max_length=50, blank=False, default = "")
     password = models.CharField(max_length=32, validators=[MinLengthValidator(8)],)
+    confirmpassword = models.CharField(max_length=32, validators=[MinLengthValidator(8)],)
     ifLogged = models.BooleanField(default=False)
     token = models.CharField(max_length=500, null=True, default="")
 
