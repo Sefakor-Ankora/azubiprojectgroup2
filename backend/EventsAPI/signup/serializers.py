@@ -28,11 +28,11 @@ class UserLoginSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = user
-        fields = ('email', 'password', 'token' )
+        fields = ['email', 'password', 'token' ]
 
-        read_only_fields = (
+        read_only_fields = [
             'token',
-       )
+       ]
 
     def validate_email(self, value):
         if not value:
@@ -50,6 +50,6 @@ class UserLogoutSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = user
-        fields = ('token', 'status' )
+        fields = ['token', 'status' ]
 
 
