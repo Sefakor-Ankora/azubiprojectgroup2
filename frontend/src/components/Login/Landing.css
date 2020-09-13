@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+.begin{
+    background-image: url(https://www.newstatesman.com/sites/all/themes/creative-responsive-theme/images/new_statesman_events.jpg);
+    background-position: bottom bottom;
+    background-size: cover;
+    width: 80rem 80rem;
+}
+
+.tc-1{
+  text-align: end;
+}
+.tc-l mt4 mt5-m mt6-l ph3{
+  text-align: right;
+}
+main {
+    padding-top: 100px;
+  }
+  
+  h2 {
+    font-size: 50px;
+    margin-bottom: 120px;
+    
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: rgb(12, 0, 116);
+
+  }
+
+
+  aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+  }
+  
+  
+  
+  .services {
+    margin-top: 300px;
+  }
+  
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0px 180px 0px;
+    position: relative;
+  }
+  
+  
+  .services-card {
+    width: 40%;
+    height: 400px;
+    background: #222;
+    display: inline-block;  
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 52px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 52px -19px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 52px -19px rgba(0,0,0,0.75);
+  }
+  
+  .service-description{
+    width: 50%;
+  
+  }
+  
+  .service-one {
+    background: url("https://images.unsplash.com/photo-1560439450-c0760617725a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80")center;
+  }
+  
+  .service-two {
+    background: url("https://images.unsplash.com/photo-1581091870619-835cee86e759?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")center;
+  }
+  
+  .service-three {
+    background: url("https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80")center;
+  }
+  
