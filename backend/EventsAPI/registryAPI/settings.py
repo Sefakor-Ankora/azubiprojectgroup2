@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'signup',
     'corsheaders',
     'rest_auth',
+    'events',
+    'register',
+    'ckeditor',
+    'ckeditor_uploader',
     
 ]
 
@@ -138,5 +142,26 @@ STATIC_URL = '/static/'
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+
+
+
+
+
+CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"
+#CKEDITOR_UPLOAD_PREFIX = "http://media.lawrence.com/media/ckuploads/
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+        'height': 300,
+        'width': 300,
+    },
+}
 
 
