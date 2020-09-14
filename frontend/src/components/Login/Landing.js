@@ -17,20 +17,28 @@ const Landing = () => {
     <Container>
 
     <header class="sans-serif">
+    <div class="header">
+    <nav class="flex justify-between flex-grow bb b--black-10">
+  <a class="f15 dib black no-underline pv2 ph4 br-pill flex items-center " href="/">Evently
+  </a>
+  <div class="flex-grow pa3 flex items-center">
+    <a class="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</a>
+    <a class="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Browse Events</a>
+    <a class="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" href="#0">Sign In</a>
+  </div>
+</nav>
+    
     <div className='begin'>
-      <nav class="dt w-100 mw8 center"> 
-        <div class="dtc v-mid tr pa3">
-          <a class="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/" >Link</a> 
-          <a class="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/" >Browse Events</a> 
-          <a class="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign In</a> 
-        </div>
-      </nav> 
       <div class="tc-l mt4 mt5-m mt6-l ph3">
         <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">BUSINESS<br/>CONFERENCE 2020</h1>
         <h6 class="f4 no-underline dib v-mid bg-blue white b--blue ph3 pv2 mb3">September 30,2020- 8am-6pm</h6><br/>
         <a class="f6 no-underline grow dib v-mid bg-white black ba b--white ph3 pv2 mb3" href="/">Get ticket</a>
       </div>
       </div>
+      </div>
+
+
+
       <main class='f2 f1-1 fw2 black-90 mb0 1h-title'>
       <h2>Upcoming Events</h2>
         <section>
@@ -44,14 +52,6 @@ const Landing = () => {
     </div>
 </div>
 
-<div>
-<aside>
-<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</aside>
-</div>
-
-
-
 <div className="service-container">
  
  <div className="services-card service-two"></div>
@@ -60,14 +60,6 @@ const Landing = () => {
      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt massa sem.</div>
  </div>
 </div>
-
-
-<div>
-<aside>
-<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</aside>
-</div>
-
 
 
 <div className="service-container">

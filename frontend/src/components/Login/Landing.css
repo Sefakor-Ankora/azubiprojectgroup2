@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+nav{
+  background-color: rgb(131, 131, 255);
+  padding-left: 2rem;
+  font-size: 50px;
+  font-family: 'Anton', sans-serif;
+ 
+
+}
+
 .begin{
     background-image: url(https://www.newstatesman.com/sites/all/themes/creative-responsive-theme/images/new_statesman_events.jpg);
     background-position: bottom bottom;
+    background-size: cover cover;
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    
 }
 main {
-    padding-top: 100px;
+    padding-top: 5rem;
   }
   
   h2 {

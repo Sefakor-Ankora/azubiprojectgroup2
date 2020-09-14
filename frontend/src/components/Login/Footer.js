@@ -6,7 +6,7 @@
 
 export default function Footer() {
      return (
-         <div className="footer">
+         <div class="wrap">
              <footer class="pa4 pa5-l black-70 bt b--black-10">
                 <div class="tc mt3">
              <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
@@ -38,14 +38,14 @@ export default function Footer() {
             </p>
             </div>
             <div class="db dtc-ns black-70 tc tr-ns v-mid">
-            <a href="https://web.facebook.com/sean.donald1" class="link dim dib mr3 black-70" title="Impossible Labs on Facebook">
+            <a href="https://web.facebook.com/sean.donald1" class="link dim dib mr3  hover-blue black-70" title="Impossible Labs on Facebook">
                 <svg class="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
                 <title >facebook icon</title>
                 <path d="M8 12 L13 12 L13 8 C13 2 17 1 24 2 L24 7 C20 7 19 7 19 10 L19 12 L24 12 L23 18 L19 18 L19 30 L13 30 L13 18 L8 18 z"
                 ></path>
                 </svg>
             </a>
-            <a href="https://twitter.com/donny_doe" class="link dim dib mr3 black-70">
+            <a href="https://twitter.com/donny_doe" class="link dim dib mr3  hover-light-blue black-70">
                 <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 32 32"
                 fill="currentColor" >
                 <title >twitter icon</title>
@@ -53,7 +53,7 @@ export default function Footer() {
                 ></path>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/donald-doe-seanedzu-30310b14b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BF4CSOpojRQWq9TUkH7GrNg%3D%3D" class="link dim dib black-70">
+            <a href="https://www.linkedin.com/in/donald-doe-seanedzu-30310b14b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BF4CSOpojRQWq9TUkH7GrNg%3D%3D" class="link dim dib hover-light-blue  black-70">
                 <svg class="db w2 h2" x="0px" y="0px" viewBox="0 0 48 48" >
                 <linearGradient gradientUnits="userSpaceOnUse" x1="23.9995"
                     y1="0" x2="23.9995" y2="48.0005" >
