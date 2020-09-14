@@ -7,11 +7,6 @@ import Footer from './Footer.js';
 
 
 
-
-
-
-
-
 const Landing = () => {
   return (
     <Container>
@@ -36,47 +31,92 @@ const Landing = () => {
       </div>
       </div>
       </div>
-
-
-
-      <main class='f2 f1-1 fw2 black-90 mb0 1h-title'>
-      <h2>Upcoming Events</h2>
-        <section>
-<div className="service-container">
-    <div className="services-card service-one"></div>
-    <div className="service-description">
-
-       <h3>Event 1</h3>
-       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt massa sem.</div>
-
-    </div>
-</div>
-
-<div className="service-container">
- 
- <div className="services-card service-two"></div>
- <div className="service-description">
-     <h3>Event 2</h3>
-     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt massa sem.</div>
- </div>
-</div>
-
-
-<div className="service-container">
-   <div className="services-card service-three"></div>
-   <div className="service-description">
-       <h3>Event </h3>
-       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse tincidunt massa sem.</div>
-   </div>
-   
- 
-</div>
-<div class="tc-l mt4 mt5-m mt6-l ph3">
-<a class="f6 no-underline grow dib v-mid bg-blue white ba b--grey ph3 pv2 mb3" href="/">More Events</a>
-</div>
-        </section>
-        </main>
     </header>
+
+    
+
+    <main class="mw6 left">
+    <h2>Upcoming Events</h2>
+  <article>
+    <a class="link dt w-100 bb b--black-10 pb2 mt2 dim blue" href="/">
+      <div class="dtc w3">
+        <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?cs=srgb&dl=pexels-christina-morillo-1181354.jpg&fm=jpg" class="db w-100" alt="conference 1" />
+      </div>
+      <div class="dtc v-top pl2">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">Grid Systems</h1>
+        <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+        <dl class="mt2 f6">
+          <dt class="clip">Location</dt>
+          <dd class="ml0">Nairobi,Kenya</dd>
+        </dl>
+      </div>
+    </a>
+  </article>
+  <article>
+    <a class="link dt w-100 bb b--black-10 pb2 mt2 dim blue" href="/">
+      <div class="dtc w3">
+        <img src="https://images.unsplash.com/photo-1581091870619-835cee86e759?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"  class="db w-100" alt="conference2" />
+      </div>
+      <div class="dtc v-top pl2">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">History of the Poster</h1>
+        <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+        <dl class="mt2 f6">
+          <dt class="clip">Location</dt>
+          <dd class="ml0">Lagos,Nigeria</dd>
+        </dl>
+      </div>
+    </a>
+  </article>
+  <article>
+    <a class="link dt w-100 bb b--black-10 pb2 mt2 dim blue" href="#0">
+      <div class="dtc w3">
+        <img src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80" alt="conference 3" class="db w-100"/>
+      </div>
+      <div class="dtc v-top pl2">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">Graphic Design in IBM: Typography, Photography, and Illustration</h1>
+        <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+        <dl class="mt2 f6">
+          <dt class="clip">Location</dt>
+          <dd class="ml0">Cairo,Egypt</dd>
+        </dl>
+      </div>
+    </a>
+  </article>
+  <article>
+    <a class="link dt w-100 bb b--black-10 pb2 mt2 dim blue" href="#0">
+      <div class="dtc w3">
+        <img src="https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="conference 4" class="db w-100"/>
+      </div>
+      <div class="dtc v-top pl2">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">Fotoplakate: Von den Anfängen</h1>
+        <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+        <dl class="mt2 f6">
+          <dt class="clip">Location</dt>
+          <dd class="ml0">Accra,Ghana</dd>
+        </dl>
+      </div>
+    </a>
+  </article>
+  <article>
+    <a class="link dt w-100 bb b--black-10 pb2 mt2 dim blue" href="#0">
+      <div class="dtc w3">
+        <img src="https://images.pexels.com/photos/935756/pexels-photo-935756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="conference 4" class="db w-100"/>
+      </div>
+      <div class="dtc v-top pl2">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">The Graphic Artist</h1>
+        <h2 class="f6 fw4 mt2 mb0 black-60">Josef Müller-Brockmann</h2>
+        <dl class="mt2 f6">
+          <dt class="clip">Location</dt>
+          <dd class="ml0">Accra,Ghana</dd>
+        </dl>
+      </div>
+    </a>
+  </article>
+        </main>
+
+    <div class="mw6 center">
+      <a class="f6 dib blue bg-animate hover-bg-blue hover-white no-underline pv2 ph4 br-pill ba b--white-20" href="/">MORE EVENTS</a>
+    </div>
 
     <div>
       <Footer/>

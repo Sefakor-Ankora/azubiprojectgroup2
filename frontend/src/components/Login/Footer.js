@@ -1,5 +1,7 @@
  import React from 'react';
  import 'tachyons';
+import './Footer.css';
+
 
 
 
@@ -31,6 +33,20 @@ export default function Footer() {
             <a href="tel:+5555555555" class="link dim f6 db fw6 pv3 black-70" title="Call the Accra office">+233 54 161 5045</a>
             </article>
         </div>
+     <section class="cf mb5">
+        <div class="mb4 mb0-ns w-100 w-50-l fr">
+            <a class="black-70 f3 f2-ns fw6 tl link dim dib pv3 mt2 mb4 mb0-l" href="mailto:donnydoe86@gmail.com" >
+                donnydoe86@gmail.com
+             </a>
+         </div>
+         <div class="mb4 mb0-ns fl w-100 w-50-l" >
+             <p class="f4 fw6 mb2 f6 mt0">
+             Sign up for our newsletter.
+             </p>
+        <input placeholder="Email Address" class="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box"/>
+             <input type="submit" class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray"/>
+    </div>
+  </section>
         <div class="dt dt--fixed w-100" >
             <div class="dn dtc-ns v-mid">
             <p class="f7 black-70 dib pr3 mb3">
@@ -72,6 +88,7 @@ export default function Footer() {
             </a>
             </div>
         </div>
+        
         <div class="db dn-ns">
             <p class="f7 black-70 mt4 tc">
             Copyright © Evently 2020

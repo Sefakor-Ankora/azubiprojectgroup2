@@ -4,7 +4,8 @@ import React from 'react'
 // import Particles from 'react-particles-js'; //imported this component for the background
 // import  Stepforms  from './components/Stepforms';
 // import Logo from './components/Login/Logo';
-import Landing from './components/Login/Landing';
+// import Landing from './components/Login/Landing';
+import Details from './components/Login/Details';
 
 
 
@@ -26,7 +27,8 @@ const App = () => {
         {/* <Particles className='particles'
            params={ particlesOptions } 
         /> */}
-        <Landing/>
+        <Details/>
+        {/* <Landing/> */}
         {/* <Logo/>
        <Stepforms /> */}
        
