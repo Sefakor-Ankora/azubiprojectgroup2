@@ -2,15 +2,6 @@
 .begin{
     background-image: url(https://www.newstatesman.com/sites/all/themes/creative-responsive-theme/images/new_statesman_events.jpg);
     background-position: bottom bottom;
-    background-size: cover;
-    width: 80rem 80rem;
-}
-
-.tc-1{
-  text-align: end;
-}
-.tc-l mt4 mt5-m mt6-l ph3{
-  text-align: right;
 }
 main {
     padding-top: 100px;
