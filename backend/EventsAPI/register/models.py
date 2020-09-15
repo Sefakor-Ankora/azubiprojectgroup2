@@ -7,6 +7,12 @@ class Register(models.Model):
     email = models.EmailField(blank=False, default = "")
     phonenumber = models.CharField(max_length=50, blank = False, default = "")
     ticketnumber = models.CharField(max_length=50, blank = False, default = "")
+    time_scheduled = (
+        ('morning', 'Morning'),
+        ('afternoon', 'Afternoon'),
+        ('afternoon', 'Afternoon')
+    )
+    time = models.CharField(max_length=25, choices=time_scheduled)
 
 
     def _str_(self):
