@@ -9,7 +9,7 @@ class Register(models.Model):
     ticketnumber = models.CharField(max_length=50, blank = False, default = "")
     time_scheduled = (
         ('morning', 'Morning'),
-        ('afternoon', 'Afternoon'),
+        ('midmorning', 'Midmorning'),
         ('afternoon', 'Afternoon')
     )
     time = models.CharField(max_length=25, choices=time_scheduled)

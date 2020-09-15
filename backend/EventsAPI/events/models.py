@@ -11,7 +11,7 @@ class Events(models.Model):
     topic = RichTextField()
     time_scheduled = (
         ('morning', 'Morning'),
-        ('afternoon', 'Afternoon'),
+        ('midmorning', 'Midmorning'),
         ('afternoon', 'Afternoon')
     )
     time = models.CharField(max_length=25, choices=time_scheduled)
