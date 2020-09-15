@@ -42,6 +42,7 @@ const handleSubmit = (e) => {
                 <input
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="email"
+                  placeholder="example@gmail.com"
                   name="email"
                   id="email"
                   value= {email}
@@ -55,6 +56,7 @@ const handleSubmit = (e) => {
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
+                  placeholder="Password here"
                   id="password"
                   value= {password}
                   required={true}
