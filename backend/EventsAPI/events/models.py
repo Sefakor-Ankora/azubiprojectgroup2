@@ -18,3 +18,14 @@ class Events(models.Model):
     room_capacity = models.CharField(max_length=50, blank=False, default='')
     description = RichTextUploadingField()
     #date = models.DateField(null=True, blank=True)
+
+
+
+
+def _str_(self):
+        return self.name
+
+            
+            
+class Meta:
+        ordering = ('id',)
