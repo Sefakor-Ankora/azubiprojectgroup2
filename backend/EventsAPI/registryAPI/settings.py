@@ -27,7 +27,7 @@ SECRET_KEY = 'ukr&+45r9y_2fa@i$#ua(ezjg&)w$rdt@0*zki0cu&!#in!6_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '0.0.0.0', '127.0.0.1','13.89.37.205']
+ALLOWED_HOSTS = [ '0.0.0.0', '127.0.0.1','104.43.131.87']
 
 
 # Application definition
@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'signup',
     'corsheaders',
     'rest_auth',
+    'events',
+    'register',
+    'ckeditor',
+    'ckeditor_uploader',
     
 ]
 
@@ -138,5 +142,26 @@ STATIC_URL = '/static/'
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
+
+
+
+
+
+CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"
+#CKEDITOR_UPLOAD_PREFIX = "http://media.lawrence.com/media/ckuploads/
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+        'height': 300,
+        'width': 300,
+    },
+}
 
 
