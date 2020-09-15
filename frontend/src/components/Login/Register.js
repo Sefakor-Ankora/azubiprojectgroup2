@@ -1,10 +1,14 @@
 import React from 'react';
+// import formValidation from 'formvalidation/dist/es6/core/Core';
+
 
 export const Register = ({ formData, setForm, navigation }) => {
   //called the function to use to created the forms
   const {firstname,lastname,city,phonenumber,address} = formData;
+
+
   return (
-    <div>
+    <form id="loginForm" method="POST">
       {/* created the signup inputs with inline styling */}
        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
@@ -84,8 +88,11 @@ export const Register = ({ formData, setForm, navigation }) => {
           </div>
         </main>
       </article>
-    </div>
+    </form>
   );
 }
+
+
+
 
 export default Register;

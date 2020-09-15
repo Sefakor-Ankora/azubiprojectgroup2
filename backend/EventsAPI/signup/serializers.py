@@ -39,7 +39,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({"email": "Email is required"})
 
         if not re.search(regex, value):
-            raise serializers.ValidationError({"email":"Invali"})
+            raise serializers.ValidationError({"email":"Invalid"})
 
 
 

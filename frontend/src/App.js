@@ -1,11 +1,13 @@
 
 import React from 'react'
-// import './App.css';
+import './App.css';
 // import Particles from 'react-particles-js'; //imported this component for the background
-// import  Stepforms  from './components/Stepforms';
+import  Stepforms  from './components/Stepforms';
 // import Logo from './components/Login/Logo';
 // import Landing from './components/Login/Landing';
-import Details from './components/Login/Details';
+// import Details from './components/Login/Details';
+// import Event from './components/Event';
+// import EventLayout from './components/EventLayout';
 
 
 
@@ -27,10 +29,13 @@ const App = () => {
         {/* <Particles className='particles'
            params={ particlesOptions } 
         /> */}
-        <Details/>
+        {/* <Details/> */}
         {/* <Landing/> */}
-        {/* <Logo/>
-       <Stepforms /> */}
+        {/* <Logo/> */}
+       <Stepforms />
+       {/* <Event/> */}
+       {/* <EventLayout/> */}
+
        
     </div>
   )
