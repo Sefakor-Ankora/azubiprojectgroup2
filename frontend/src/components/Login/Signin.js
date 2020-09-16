@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import axios from "axios";
+import axios from "axios";
 // import formValidation from 'formvalidation/dist/es6/core/Core';
 import { useForm } from "react-hook-form";
 
@@ -13,26 +13,26 @@ export const Signin = ({ formData, setForm, navigation }) => {
   const {email, password} = formData;
 
 
-// const handleSubmit = (e) => {
-//   // e.preventDefault()
-//   console.log(formData)
+const handleSubmit = (e) => {
+  // e.preventDefault()
+  console.log(formData)
 
-//    console.log(email, password)
+   console.log(email, password)
 
-//   axios.post('http://52.176.53.158/api/login/',
-//       { email, password}
-//     )
-//     .then(function (response) {
-//       console.log(response);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
+  axios.post('http://52.176.53.158/api/login/',
+      { email, password}
+    )
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
-// }
+}
 
 
-const {handleSubmit, register, errors} = useForm();
+const { register, errors} = useForm();
 const onSubmit = values => console.log(values);
 
   return (
