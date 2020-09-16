@@ -2,6 +2,9 @@ from django.test import TestCase
 from factory import DjangoModelFactory, Faker
 
 from ..models import Events
+from .factories import EventsFactory
+from ..serializers import EventsSerializer
+from django.urls import reverse
 
 
 # Create your tests here.
@@ -22,12 +25,6 @@ class EventsFactory(DjangoModelFactory):
 
 
 # tests/test_models.py
-from django.test import TestCase
-
-from ..models import Events
-from .factories import EventsFactory
-
-
 class EventsTestCase(TestCase):
     def test_str(self):
         """Test for string representation."""
@@ -37,12 +34,6 @@ class EventsTestCase(TestCase):
 
 
 # tests/test_serializers.py
-from django.test import TestCase
-
-from ..serializers import EventsSerializer
-from .factories import EventsFactory
-
-
 class EventsSerializer(TestCase):
     def test_model_fields(self):
         """Serializer data matches the Events object for each field."""
@@ -59,12 +50,6 @@ class EventsSerializer(TestCase):
 
 
 # tests/test_views.py
-from django.test import TestCase
-from django.urls import reverse
-from rest_framework import status
-
-from .factories import EventsFactory
-
 
 def test_post(self):
           """POST to create an Event."""

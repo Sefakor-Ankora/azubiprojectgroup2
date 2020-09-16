@@ -1,10 +1,14 @@
 from django.urls import path
 from .views import Signup, Login, Logout
+from django.conf.urls import url
+from rest_framework.authtoken.views import ObtainAuthToken
+from signup import views
 
 urlpatterns = [
     path('signup/', Signup.as_view(), name="signup"),
     path('login/', Login.as_view(), name="login"),
     path('logout/', Logout.as_view(), name="logout"),
+   # url(r'^api-token-auth/', views.obtain_auth_token)
 ]
 
 

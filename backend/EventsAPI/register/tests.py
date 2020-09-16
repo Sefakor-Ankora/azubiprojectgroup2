@@ -1,7 +1,11 @@
 from django.test import TestCase
 from factory import DjangoModelFactory, Faker
+from .factories import RegisterFactory
 
 from ..models import Register
+from ..serializers import RegisterSerializer
+from django.urls import reverse
+from rest_framework import status
 
 # Create your tests here.
 class RegisterFactory(DjangoModelFactory):
@@ -18,12 +22,6 @@ class RegisterFactory(DjangoModelFactory):
 
 
 # tests/test_models.py
-from django.test import TestCase
-
-from ..models import Register
-from .factories import RegisterFactory
-
-
 class RegisterTestCase(TestCase):
     def test_str(self):
         """Test for string representation."""
@@ -35,12 +33,6 @@ class RegisterTestCase(TestCase):
 
 
 # tests/test_serializers.py
-from django.test import TestCase
-
-from ..serializers import RegisterSerializer
-from .factories import RegisterFactory
-
-
 class RegisterSerializer(TestCase):
     def test_model_fields(self):
         """Serializer data matches the Register object for each field."""
@@ -56,14 +48,7 @@ class RegisterSerializer(TestCase):
 
 
 # tests/test_views.py
-from django.test import TestCase
-from django.urls import reverse
-from rest_framework import status
-
-from .factories import RegisterFactory
-
-
-def test_post(self):
+    def test_post(self):
           """POST to create Registration."""
           data = {
               'fullname': 'New fullname',
