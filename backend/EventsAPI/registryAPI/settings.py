@@ -27,7 +27,7 @@ SECRET_KEY = 'ukr&+45r9y_2fa@i$#ua(ezjg&)w$rdt@0*zki0cu&!#in!6_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'https://azubigroup2.azurewebsites.net/', 'http://localhost:3000', '0.0.0.0', '127.0.0.1','52.176.53.158']
+ALLOWED_HOSTS = [  '0.0.0.0', '127.0.0.1','52.176.53.158']
 
 # Application definition
 
@@ -163,4 +163,17 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+CORS_ALLOWED_ORIGINS = [
 
+    "http://localhost:3000",
+    "http://127.0.0.1:9000"
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
