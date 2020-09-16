@@ -1,11 +1,17 @@
 import React from 'react';
-// import Button from '@material-ui/core/Button';
+import { useForm } from "react-hook-form";
 
 
 export const Address = ({ formData, setForm, navigation }) => {
   const {email,password,confirmpassword} = formData;
+
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data, e) => console.log(data, e);
+  const onError = (errors, e) => console.log(errors, e);
+
+
   return (
-       <div>
+       <form onSubmit={handleSubmit(onSubmit)}>
        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
           <div className="measure">
@@ -17,9 +23,10 @@ export const Address = ({ formData, setForm, navigation }) => {
                   className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="email"
                   name="email"
+                  ref={register({required: true, pattern: /^\S+@\S+$/i})}
+                  placeholder="example@gmail.com"
                   id="email"
                   value= {email}
-                  required={true}
                   onChange={setForm}
                 />
               </div>
@@ -29,9 +36,10 @@ export const Address = ({ formData, setForm, navigation }) => {
                   className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                   type="password"
                   name="password"
+                  ref={register({ required: true, minLength: 10, pattern: /\d+/ })}
                   id="password"
                   value= {password}
-                  required={true}
+                  placeholder="Password here"
                   onChange={setForm}
                 />
               </div>
@@ -68,7 +76,7 @@ export const Address = ({ formData, setForm, navigation }) => {
           </div>
         </main>
       </article>
-    </div>
+    </form>
   );
 }
 export default Address;

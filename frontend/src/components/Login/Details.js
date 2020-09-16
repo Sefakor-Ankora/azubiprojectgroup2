@@ -31,6 +31,9 @@ export default function Details() {
             </nav>
             <div></div>
             <div>
+                
+            </div>
+            <div>
                 <Footer/>
             </div>
             </Container>

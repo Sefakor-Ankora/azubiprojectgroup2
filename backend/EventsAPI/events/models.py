@@ -17,7 +17,7 @@ class Events(models.Model):
     time = models.CharField(max_length=25, choices=time_scheduled)
     room_capacity = models.CharField(max_length=50, blank=False, default='')
     description = RichTextUploadingField()
-    #date = models.DateField(null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True)
 
 
 

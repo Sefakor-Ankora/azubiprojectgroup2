@@ -3,6 +3,7 @@ from signup.models import user
 from django.db.models import Q
 from rest_framework.validators import UniqueValidator
 from django.core.exceptions import ValidationError
+import re
 
 
 
@@ -34,12 +35,17 @@ class UserLoginSerializer(serializers.ModelSerializer):
             'token',
        ]
 
-    def validate_email(self, value):
-        if not value:
-            raise serializers.ValidationError({"email": "Email is required"})
+    #def validate_email(self, value):
+        #if not value:
+            #raise serializers.ValidationError({"email": "Email is required"})
 
+<<<<<<< HEAD
+        #if not re.search(regex, value):
+            #raise serializers.ValidationError({"email":"Invalid"})
+=======
         if not re.search(regex, value):
-            raise serializers.ValidationError({"email":"Invali"})
+            raise serializers.ValidationError({"email":"Invalid"})
+>>>>>>> 1a3afb144a43ad63c231ecf23ac86edcb8e7a187
 
 
 
