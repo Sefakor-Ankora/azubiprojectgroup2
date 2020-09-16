@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
   // e.preventDefault()
   console.log(formData)
 
-  axios.post('http://127.0.0.1:8000/api/signup/',
+  axios.post('http://52.176.53.158/api/signup/',
     formData
 )
     .then(function (response) {
@@ -92,7 +92,7 @@ const handleSubmit = (e) => {
 
 export const RenderAccordion = ({ summary, details, go }) => (
   <Accordion>
-    < AccordionSummary
+    <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
     > {  summary }</AccordionSummary>
     <AccordionDetail>
