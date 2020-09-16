@@ -2,12 +2,9 @@ import React, { Component } from "react";
 // import { Toast, notify } from "../Helper/notify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
-// import Footer from "./Event/Footer";
-// import Event from "./Event/Event";
-// import Navbar from "../Navbar/Navbar";
 import Auxiliary from "../../hoc/Auxiliary";
 // import Modal from "../Wigets/Modal";
-// import EventRegistration from "./Event/EventRegistration";
+
 import  * as consts  from '../../store/constants';
 
 class EventLayout extends Component {
