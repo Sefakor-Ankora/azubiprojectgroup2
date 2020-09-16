@@ -35,14 +35,6 @@ class UserLoginSerializer(serializers.ModelSerializer):
             'token',
        ]
 
-    #def validate_email(self, value):
-        #if not value:
-            #raise serializers.ValidationError({"email": "Email is required"})
-        #if not re.search(regex, value):
-            #raise serializers.ValidationError({"email":"Invalid"})
-
-
-
 
 class UserLogoutSerializer(serializers.ModelSerializer):
     token = serializers.CharField()
