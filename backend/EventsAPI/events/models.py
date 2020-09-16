@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Events(models.Model):
+    event_name = models.CharField(max_length=50, blank=False, default='')
     speaker_name = models.CharField(max_length=50, blank=False, default='')
     topic = RichTextField()
     time_scheduled = (
@@ -14,7 +15,7 @@ class Events(models.Model):
         ('midmorning', 'Midmorning'),
         ('afternoon', 'Afternoon')
     )
-    time = models.CharField(max_length=25, choices=time_scheduled)
+    schedule = models.CharField(max_length=25, choices=time_scheduled)
     room_capacity = models.CharField(max_length=50, blank=False, default='')
     description = RichTextUploadingField()
     date = models.DateTimeField(null=True, blank=True)
