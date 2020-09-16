@@ -27,7 +27,11 @@ SECRET_KEY = 'ukr&+45r9y_2fa@i$#ua(ezjg&)w$rdt@0*zki0cu&!#in!6_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS =  [ '0.0.0.0', '*', '127.0.0.1', '13.89.37.205' ]
+=======
+ALLOWED_HOSTS = [ '0.0.0.0', '127.0.0.1','52.176.53.158']
+>>>>>>> 19dd7b55c3145dfb5adf7654f871e74e85c161bf
 
 donnydoe86@gmail.com , donalddoe1
 
