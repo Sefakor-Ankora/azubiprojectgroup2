@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import axios from "axios";
 // import formValidation from 'formvalidation/dist/es6/core/Core';
 import { useForm } from "react-hook-form";
+import Logo from './Logo';
 
 
 
@@ -36,6 +37,8 @@ const { register, errors} = useForm();
 const onSubmit = values => console.log(values);
 
   return (
+    <>
+    <Logo/>
     <form onSubmit={handleSubmit(onSubmit)}>
       {
         /*  created the signup inputs with inline styling */ }
@@ -105,6 +108,7 @@ const onSubmit = values => console.log(values);
         </main>
       </article>
     </form>
+    </>
   );
 }
 
