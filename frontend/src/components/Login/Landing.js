@@ -20,6 +20,7 @@ const Landing = () => {
     <Link className="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</Link>
     <Link className="f6 link dib black dim hover-white mr3 mr4-ns" to="/details">Browse Events</Link>
     <Link className="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/signin">Sign In</Link>
+    <Link className="f6 dib black bg-animate hover-bg-black hover-blue no-underline pv2 ph4 br-pill ba b--white-20" to="/signin">Dashboard</Link>
   </div>
 </nav>
     

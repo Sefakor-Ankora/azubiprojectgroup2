@@ -3,6 +3,7 @@ import axios from "axios";
 // import formValidation from 'formvalidation/dist/es6/core/Core';
 import { useForm } from "react-hook-form";
 import Logo from './Logo';
+import { Link } from 'react-router-dom'
 
 
 
@@ -87,6 +88,7 @@ const onSubmit = values => console.log(values);
               {errors?.password?.types?.pattern && <p>password number only</p>}
             </fieldset>
             <div className="">
+              <Link to = "/dashboard">
               <input
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
@@ -95,6 +97,7 @@ const onSubmit = values => console.log(values);
                   () => handleSubmit()
                 }
               />
+              </Link>
               {
                 /* click on event, allows you to move to the next page */ }
             </div>

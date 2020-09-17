@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import 'tachyons';
 import './Details.css';
 import Footer from './Footer.js';
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,7 +17,7 @@ export default function Details() {
             <div class="flex-grow pa3 flex items-center">
                 <a class="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</a>
                 <a class="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Browse Events</a>
-                <a class="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" href="#0">Sign In</a>
+                <Link class="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/sign">Sign In</Link>
             </div>
             </nav>
             <nav class="subtitle">
