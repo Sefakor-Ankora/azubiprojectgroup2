@@ -17,11 +17,12 @@ class UserSerializer(serializers.ModelSerializer):
         model = user
         fields = ('id', 'firstname', 'lastname', 'address', 'city', 'phonenumber', 'email', 'password', 'confirmpassword')
 
-        
+    
 
 class UserLoginSerializer(serializers.ModelSerializer):
-    # to accept either username or email
-    email = serializers.CharField()
+    # to accept   email
+    #email = serializers.CharField()
+    email = serializers.EmailField(validators=[UniqueValidator(queryset=user.objects.all())])
     password = serializers.CharField()
     token = serializers.CharField(required=False, read_only=True)
 
