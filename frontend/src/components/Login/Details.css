@@ -9,3 +9,12 @@ nav{
   .subtitle{
       background-color: rgb(219, 209, 209);
   }
+  
+  #graphics {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+figure {
+  margin: 1em;
+}
