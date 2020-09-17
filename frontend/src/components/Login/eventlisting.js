@@ -65,7 +65,7 @@ let imgList = [
     },
 ];
 
-const Image = ({ img, date, title }) => {
+export default function Image = ({ img, date, title }) => {
     return (
         <div id="graphics">
             <figure>

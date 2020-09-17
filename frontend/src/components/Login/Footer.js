@@ -91,7 +91,7 @@ export default function Footer() {
         
         <div class="db dn-ns">
             <p class="f7 black-70 mt4 tc">
-            Copyright © Evently 2020
+            Developed by Donald|Wisdom|Dolly <br/> © Evently 2020
             </p>
         </div>
         </footer>

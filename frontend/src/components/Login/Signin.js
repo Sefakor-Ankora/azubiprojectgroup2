@@ -41,8 +41,8 @@ const onSubmit = values => console.log(values);
     <>
     <Logo/>
     <form onSubmit={handleSubmit(onSubmit)}>
-      {
-        /*  created the signup inputs with inline styling */ }
+    
+     
        <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
         <main className="pa4 black-80">
           <div className="measure">
@@ -116,43 +116,6 @@ const onSubmit = values => console.log(values);
 }
 
 
-// useEffect(  () => {
-//   // Create a FormValidation instance
-//   this.fv = formValidation(document.getElementById('loginForm'), {
-//       fields: {
-//           username: {
-//               validators: {
-//                   notEmpty: {
-//                       message: 'The email is required'
-//                   },
-//                   stringLength: {
-//                       min: 6,
-//                       max: 30,
-//                       message: 'The email must be more than 6 and less than 30 characters long',
-//                   },
-//                   regexp: {
-//                       regexp: /^[a-zA-Z0-9_]+$/,
-//                       message: 'The email can only consist of alphabetical, number and underscore',
-//                   },
-//               }
-//           },
-//           password: {
-//               validators: {
-//                   notEmpty: {
-//                       message: 'The password is required'
-//                   },
-//                   stringLength: {
-//                       min: 8,
-//                       message: 'The password must have at least 8 characters',
-//                   },
-//               }
-//           },
-//       },
-//       plugins: {
-          
-//       },
-//   });
-// })
 
 
 
