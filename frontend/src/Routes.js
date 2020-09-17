@@ -8,6 +8,8 @@ import {
   import  Stepforms  from './components/Stepforms';
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
+import Dashboard from './components/Login/Dashboard';
+
 
 
 
@@ -18,8 +20,11 @@ export default function Routes() {
     <Router>
       <div>
         <Switch>
-          <Route path="/signin">
+          <Route exact path="/signin">
             <Stepforms />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
           </Route>
           <Route path="/details">
             <Details />
