@@ -120,6 +120,9 @@ render(<Gallery images={imgList} />, document.getElementById("root"));
 
             </div>
             <div>
+                
+            </div>
+            <div>
                 <Footer/>
             </div>
             </Container>

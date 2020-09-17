@@ -27,7 +27,8 @@ SECRET_KEY = 'ukr&+45r9y_2fa@i$#ua(ezjg&)w$rdt@0*zki0cu&!#in!6_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '0.0.0.0', '127.0.0.1','13.89.37.205']
+ALLOWED_HOSTS = [  '0.0.0.0', '127.0.0.1','52.176.53.158']
+
 
 
 # Application definition
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',                               
+    'rest_framework', 
+    'rest_framework.authtoken',                              
     'signup',
     'corsheaders',
     'rest_auth',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'register',
     'ckeditor',
     'ckeditor_uploader',
+    
     
 ]
 
@@ -101,7 +104,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-REST_AUTH_SERIALIZERS = {     'USER_DETAILS_SERIALIZER':'users.serializers.CustomUserDetailsSerializer' }
+REST_AUTH_SERIALIZERS = { 'USER_DETAILS_SERIALIZER':'users.serializers.CustomUserDetailsSerializer' }
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -143,10 +146,6 @@ import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
-
-
-
-
 CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"
 #CKEDITOR_UPLOAD_PREFIX = "http://media.lawrence.com/media/ckuploads/
 CKEDITOR_CONFIGS = {
@@ -164,4 +163,17 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+CORS_ALLOWED_ORIGINS = [
 
+    "http://localhost:3000",
+    "http://127.0.0.1:9000"
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]

@@ -1,12 +1,12 @@
 import React from 'react'
+import './Stepforms.css'
+import Particles from 'react-particles-js'; //imported this component for the background
 import {useForm} from 'react-hooks-helper';             //imported a component to create forms and navigation
 import Signin from '../components/Login/Signin';
 import Register from '../components/Login/Register';     
 import Address from '../components/Login/Address';
 import Review from '../components/Login/Review';
 import Submit from '../components/Login/Submit';
-
-
 import {
   useStep
 } from 'react-hooks-helper'; //imported a component to create forms and navigation
@@ -59,9 +59,29 @@ switch(step.id) {
             return <Submit { ...props } />;
 }
 
+
+
+
+  const particlesOptions = {          //created a function for the background
+    particles: {
+      number: {
+        value: 100,
+        density: true,
+        enable: 800
+      }
+    }
+  }
+
+
+
+
   return (
     //calling the various components 
     <div>
+      <Particles className='particles'
+           params={ particlesOptions } 
+        />
+        
       <Signin /> 
       <Register />
       <Address/>
@@ -71,7 +91,7 @@ switch(step.id) {
   )
 }
 
+
+
+
 export default Stepforms;
-
-
-
