@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import "tachyons";
 import "./Details.css";
 import Footer from "./Footer.js";
+import EventListings from "eventlisting.js";
 
 export default function Details() {
   return (
@@ -49,7 +50,7 @@ export default function Details() {
         </div>
       </nav>
 
-      <div></div>
+      <div> {EventListings} </div>
 
       <div>
         <Footer />
