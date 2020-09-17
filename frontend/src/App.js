@@ -2,9 +2,6 @@
 import React from 'react'
 import './App.css';
 // import Particles from 'react-particles-js'; //imported this component for the background
-// import  Stepforms  from './components/Stepforms';
-// import Landing from './components/Login/Landing';
-// import Details from './components/Login/Details';
 // import Event from './components/Event';
 // import EventLayout from './components/EventLayout';
 import Routes from './Routes';

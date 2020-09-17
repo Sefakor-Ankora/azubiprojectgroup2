@@ -1,13 +1,13 @@
 import React from "react";
 
-import Auxiliary from "../../../hoc/Auxiliary";
+// import Auxiliary from "../../../hoc/Auxiliary";
 
 export default Event = (props) => {
   const getData = () => {
     props.loadInfo(props.eventInfo);
   };
   return (
-    <Auxiliary>
+    <div>
       <div className="col-sm-6">
         <div className="card mb-4 bg-white shadow-lg rounded-0">
           <div className="card-body">
@@ -50,6 +50,6 @@ export default Event = (props) => {
           </div>
         </div>
       </div>
-    </Auxiliary>
+    </div>
   );
 };

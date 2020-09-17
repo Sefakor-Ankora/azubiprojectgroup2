@@ -1,11 +1,18 @@
 import React, { Component } from "react";
-import { Toast, notify } from "../Helper/notify";
+// import { Toast } from "../Helper/notify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
-import Auxiliary from "../../hoc/Auxiliary";
-import Modal from "../Wigets/Modal";
+// import Auxiliary from "../../hoc/Auxiliary";
+// import Modal from "../Wigets/Modal";
+import Footer from './Login/Footer'
+import Event from './Event'
+// import EventRegistration from './Event'
 
-import  * as consts  from '../../store/constants';
+import  * as consts  from './constants';
+
+// import React from 'react' ;
+// const Auxiliary = (props) => props.children;
+// export default Auxiliary;
 
 class EventLayout extends Component {
   state = {
@@ -30,15 +37,15 @@ class EventLayout extends Component {
       <Event key={i} eventInfo={event} loadInfo={this.loadEventInfo} info={i} />
     ));
     return (
-      <Auxiliary>
-        <Toast /> 
-         <Navbar
+      <div>
+        {/* <Toast />  */}
+         {/* <Navbar
           loginNavHandler={this.props.loginNavHandler}
           user={this.props.user}
           is_auth={this.props.isAuthenticated
           }
           onlogout={this.props.islogout}
-        />
+        /> */}
         <main role="main" className="pt-5 mt-2">
           <section className="jumbotron text-center">
             <div className="container">
@@ -68,10 +75,10 @@ class EventLayout extends Component {
         </main>
 
         <Footer /> 
-         <Modal event={this.state.event}>
+         {/* <Modal event={this.state.event}>
           <EventRegistration isAuth={this.props.isAuthenticated} user={this.props.user} event={this.state.event} />
-        </Modal> 
-      </Auxiliary>
+        </Modal>  */}
+      </div>
     );
   }
 }

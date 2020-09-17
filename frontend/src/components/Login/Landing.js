@@ -17,8 +17,8 @@ const Landing = () => {
   <a className="f15 dib black no-underline pv2 ph4 br-pill flex items-center " href="/">Evently
   </a>
   <div className="flex-grow pa3 flex items-center">
-    <a className="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</a>
-    <a className="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Browse Events</a>
+    <Link className="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</Link>
+    <Link className="f6 link dib black dim hover-white mr3 mr4-ns" to="/details">Browse Events</Link>
     <Link className="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/signin">Sign In</Link>
   </div>
 </nav>
@@ -115,7 +115,7 @@ const Landing = () => {
         </main>
 
     <div className="mw6 center">
-      <a className="f6 dib blue bg-animate hover-bg-blue hover-white no-underline pv2 ph4 br-pill ba b--white-20" href="/">MORE EVENTS</a>
+      <Link className="f6 dib blue bg-animate hover-bg-blue hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/details">MORE EVENTS</Link>
     </div>
 
     <div>

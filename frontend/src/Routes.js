@@ -8,6 +8,11 @@ import {
   import  Stepforms  from './components/Stepforms';
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
+// import EventLayout from "./components/EventLayout";
+// import Event from './components/Event.js';
+
+
+
 
 export default function App() {
   return (
@@ -17,6 +22,12 @@ export default function App() {
           <Route path="/signin">
             <Stepforms />
           </Route>
+          {/* <Route path="/event">
+            <Event />
+          </Route>
+          <Route path="/eventlayout">
+            <EventLayout />
+          </Route> */}
           <Route path="/details">
             <Details />
           </Route>
