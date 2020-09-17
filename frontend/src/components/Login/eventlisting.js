@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import "./Details.css";
 
+class EventListing extends Component {
 let imgList = [
     {
         img: "/images/1.png",
@@ -88,3 +89,7 @@ const Gallery = ({ images }) => {
 };
 
 render(<Gallery images={imgList} />);
+
+}
+
+export default EventListing;
