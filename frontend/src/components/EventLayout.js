@@ -10,9 +10,7 @@ import Event from './Event'
 
 import  * as consts  from './constants';
 
-// import React from 'react' ;
-// const Auxiliary = (props) => props.children;
-// export default Auxiliary;
+
 
 class EventLayout extends Component {
   state = {

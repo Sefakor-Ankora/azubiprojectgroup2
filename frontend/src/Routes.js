@@ -3,18 +3,17 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+  
   } from "react-router-dom";
   import  Stepforms  from './components/Stepforms';
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
-// import EventLayout from "./components/EventLayout";
-// import Event from './components/Event.js';
 
 
 
 
-export default function App() {
+
+export default function Routes() {
   return (
     <Router>
       <div>
@@ -22,12 +21,6 @@ export default function App() {
           <Route path="/signin">
             <Stepforms />
           </Route>
-          {/* <Route path="/event">
-            <Event />
-          </Route>
-          <Route path="/eventlayout">
-            <EventLayout />
-          </Route> */}
           <Route path="/details">
             <Details />
           </Route>
@@ -39,15 +32,3 @@ export default function App() {
     </Router>
   );
 }
-
-// function Landing() {
-//   return <h2>Landing</h2>;
-// }
-
-// function Stepforms() {
-//   return <h2>Stepforms</h2>;
-// }
-
-// function Details() {
-//   return <h2>Details</h2>;
-// }
