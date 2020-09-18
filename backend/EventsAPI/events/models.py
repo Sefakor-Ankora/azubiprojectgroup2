@@ -11,7 +11,7 @@ from ckeditor.fields import RichTextField
 class Events(models.Model):
     event_name = models.CharField(max_length=50, blank=False, default='')
     speaker_name = models.CharField(max_length=50, blank=False, default='')
-    topic = RichTextField()
+    topic = RichTextField(null=True, blank=True)
     time_scheduled = (
         ('morning', 'Morning'),
         ('midmorning', 'Midmorning'),
