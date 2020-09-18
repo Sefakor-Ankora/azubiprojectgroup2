@@ -1,6 +1,8 @@
  import React from 'react';
  import 'tachyons';
 import './Footer.css';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -8,69 +10,69 @@ import './Footer.css';
 
 export default function Footer() {
      return (
-         <div class="wrap">
-             <footer class="pa4 pa5-l black-70 bt b--black-10">
-                <div class="tc mt3">
-             <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
-             <h4 class="f5 f4-l fw6">Information</h4>
-            <span class="f7 f6-l black-70">About Us</span><br/>
-            <span class="f7 f6-l black-70">Privacy Policy</span><br></br>
-            <span class="f7 f6-l black-70">Terms & Conditions</span>
+         <div className="wrap">
+             <footer className="pa4 pa5-l black-70 bt b--black-10">
+                <div className="tc mt3">
+             <article className="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+             <h4 className="f5 f4-l fw6">Information</h4>
+            <span className="f7 f6-l black-70">About Us</span><br/>
+            <span className="f7 f6-l black-70">Privacy Policy</span><br></br>
+            <span className="f7 f6-l black-70">Terms & Conditions</span>
             </article>
-            <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pl2 pl0-ns">
-            <h4 class="f5 f4-l fw6">Find Events</h4>
-            <span class="f7 f6-l db black-70">
+            <article className="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pl2 pl0-ns">
+            <h4 className="f5 f4-l fw6">Find Events</h4>
+            <span className="f7 f6-l db black-70">
                 Browse Local Events
             </span>
-            <span class="f7 f6-l di black-70">
+            <span className="f7 f6-l di black-70">
                 Online Events
             </span>
             </article>
-            <article class="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
-            <h4 class="f5 f4-l fw6">Connect With Us</h4>
-            <span class="f7 f6-l db black-70">Contact</span>
-            <span class="f7 f6-l black-70">Accra,Ghana</span>
-            <a href="tel:+5555555555" class="link dim f6 db fw6 pv3 black-70" title="Call the Accra office">+233 54 161 5045</a>
+            <article className="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
+            <h4 className="f5 f4-l fw6">Connect With Us</h4>
+            <span className="f7 f6-l db black-70">Contact</span>
+            <span className="f7 f6-l black-70">Accra,Ghana</span>
+            <a href="tel:+233541615045" className="link dim f6 db fw6 pv3 black-70" title="Call the Accra office">+233 54 161 5045</a>
             </article>
         </div>
-     <section class="cf mb5">
-        <div class="mb4 mb0-ns w-100 w-50-l fr">
-            <a class="black-70 f3 f2-ns fw6 tl link dim dib pv3 mt2 mb4 mb0-l" href="mailto:donnydoe86@gmail.com" >
-                donnydoe86@gmail.com
+     <section className="cf mb5">
+        <div className="mb4 mb0-ns w-100 w-50-l fr">
+            <a className="black-70 f3 f2-ns fw6 tl link dim dib pv3 mt2 mb4 mb0-l" href="mailto:donnydoe86@gmail.com" >
+                newbreed@gmail.com
              </a>
          </div>
-         <div class="mb4 mb0-ns fl w-100 w-50-l" >
-             <p class="f4 fw6 mb2 f6 mt0">
+         <div className="mb4 mb0-ns fl w-100 w-50-l" >
+             <p className="f4 fw6 mb2 f6 mt0">
              Sign up for our newsletter.
              </p>
-        <input placeholder="Email Address" class="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box"/>
-             <input type="submit" class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray"/>
+        <input placeholder="Email Address" className="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box"/>
+            <Link to="/"> <input type="submit" className="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray"/></Link>
     </div>
   </section>
-        <div class="dt dt--fixed w-100" >
-            <div class="dn dtc-ns v-mid">
-            <p class="f7 black-70 dib pr3 mb3">
-                Copyright © Evently 2020
+        <div className="dt dt--fixed w-100" >
+            <div className="dn dtc-ns v-mid">
+            <p className="f7 black-100 dib pr3 mb3">
+            <strong> © New Breed 2020</strong> 
             </p>
             </div>
-            <div class="db dtc-ns black-70 tc tr-ns v-mid">
-            <a href="https://web.facebook.com/sean.donald1" class="link dim dib mr3  hover-blue black-70" title="Impossible Labs on Facebook">
-                <svg class="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
+            <div className="db dtc-ns black-70 tc tr-ns v-mid">
+            <a href="https://web.facebook.com/sean.donald1" className="link dim dib mr3  hover-blue black-70" title="Impossible Labs on Facebook">
+                <svg className="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
                 <title >facebook icon</title>
                 <path d="M8 12 L13 12 L13 8 C13 2 17 1 24 2 L24 7 C20 7 19 7 19 10 L19 12 L24 12 L23 18 L19 18 L19 30 L13 30 L13 18 L8 18 z"
                 ></path>
                 </svg>
             </a>
-            <a href="https://twitter.com/donny_doe" class="link dim dib mr3  hover-light-blue black-70">
-                <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 32 32"
+            <a href="https://twitter.com/donny_doe" className="link dim dib mr3  hover-light-blue black-70">
+                <svg className="db w2 h2" data-icon="twitter" viewBox="0 0 32 32"
                 fill="currentColor" >
                 <title >twitter icon</title>
                 <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"
                 ></path>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/donald-doe-seanedzu-30310b14b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BF4CSOpojRQWq9TUkH7GrNg%3D%3D" class="link dim dib hover-light-blue  black-70">
-                <svg class="db w2 h2" x="0px" y="0px" viewBox="0 0 48 48" >
+            <a href="https://www.linkedin.com/in/donald-doe-seanedzu-30310b14b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BF4CSOpojRQWq9TUkH7GrNg%3D%3D" className="link dim dib hover-light-blue  black-70">
+                <svg className="db w2 h2" x="0px" y="0px" viewBox="0 0 48 48" >
                 <linearGradient gradientUnits="userSpaceOnUse" x1="23.9995"
                     y1="0" x2="23.9995" y2="48.0005" >
                     <stop offset="0" ></stop>
@@ -89,9 +91,9 @@ export default function Footer() {
             </div>
         </div>
         
-        <div class="db dn-ns">
-            <p class="f7 black-70 mt4 tc">
-            Copyright © Evently 2020
+        <div className="db dn-ns">
+            <p className="f7 black-70 mt4 tc">
+            Developed by Donald|Wisdom|Dolly <br/> © Evently 2020
             </p>
         </div>
         </footer>

@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import EditIcon from  '@material-ui/icons/Edit';
 import axios from "axios";
  
+import { Link } from 'react-router-dom'
 
 
 export const Review = ({formData, navigation}) => {
@@ -71,6 +72,7 @@ const handleSubmit = (e) => {
            ]} />
 
            <div>
+           <Link to= "/signin" >
               <input
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
@@ -78,6 +80,7 @@ const handleSubmit = (e) => {
                 style={{marginTop: '1.5rem'}}
                  onClick={() => handleSubmit()}
               />
+              </Link>
            </div>
 
 
@@ -104,6 +107,7 @@ export const RenderAccordion = ({ summary, details, go }) => (
         return <ListIemText keys={index} >{`${objKey}: ${objValue}`}</ListIemText>
 
         }) }
+        
         <IconButton
         color='primary'
         component='span'
@@ -111,6 +115,7 @@ export const RenderAccordion = ({ summary, details, go }) => (
         >
           <EditIcon/>
         </IconButton>
+        
       </div>
     </AccordionDetail>
   </Accordion>

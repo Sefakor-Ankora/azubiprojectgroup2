@@ -3,22 +3,36 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+  
   } from "react-router-dom";
   import  Stepforms  from './components/Stepforms';
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
+import Dashboard from './components/Login/Dashboard';
+import Cards from './components/Login/Cards';
 
-export default function App() {
+
+
+
+
+
+
+export default function Routes() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/signin">
+          <Route exact path="/signin">
             <Stepforms />
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard />
           </Route>
           <Route path="/details">
             <Details />
+          </Route>
+          <Route path="/cards">
+            <Cards />
           </Route>
           <Route path="/">
             <Landing />
@@ -28,15 +42,3 @@ export default function App() {
     </Router>
   );
 }
-
-// function Landing() {
-//   return <h2>Landing</h2>;
-// }
-
-// function Stepforms() {
-//   return <h2>Stepforms</h2>;
-// }
-
-// function Details() {
-//   return <h2>Details</h2>;
-// }

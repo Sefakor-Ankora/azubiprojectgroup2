@@ -1,0 +1,17 @@
+.event_card {
+  background-color: aquamarine;
+  margin: 5px;
+  padding: 10px;
+  /* display: flex;
+  justify-content: flex-start; */
+
+}
+
+.event_card label {
+  display: block;
+  font-size: 15px;
+	color: #838383;
+	line-height: 1.6;
+  text-align: left;
+}
+ 
