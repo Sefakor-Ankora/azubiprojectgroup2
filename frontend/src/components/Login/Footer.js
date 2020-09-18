@@ -38,7 +38,7 @@ export default function Footer() {
      <section className="cf mb5">
         <div className="mb4 mb0-ns w-100 w-50-l fr">
             <a className="black-70 f3 f2-ns fw6 tl link dim dib pv3 mt2 mb4 mb0-l" href="mailto:donnydoe86@gmail.com" >
-                newbreed@gmail.com
+                simplyevents@gmail.com
              </a>
          </div>
          <div className="mb4 mb0-ns fl w-100 w-50-l" >
@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="dt dt--fixed w-100" >
             <div className="dn dtc-ns v-mid">
             <p className="f7 black-100 dib pr3 mb3">
-            <strong> © New Breed 2020</strong> 
+            <strong> © simplyevents 2020</strong> 
             </p>
             </div>
             <div className="db dtc-ns black-70 tc tr-ns v-mid">

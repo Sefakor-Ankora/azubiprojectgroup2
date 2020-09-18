@@ -1,13 +1,27 @@
-import React from "react";
+import React, { Component } from 'react';
 import "tachyons";
 import "./Details.css";
 import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
+import Eventmodel from "./Eventmodel.js";
+import Backdrop from "./Backdrop.js";
+
+
+
 
 // import { Link } from 'react-router-dom'
 
 
-export default function Details() {
+export default class Details extends Component {
+  state = {
+    creating: false
+  };
+
+  startCreateEventHandler = () => {
+    this.setState({creating: true});
+  }
+
+  render() {
   return (
      <>
      <div>
@@ -29,7 +43,20 @@ export default function Details() {
                 <dd className="ml0">Nairobi,Kenya</dd>
                 </dl>
                   </div>
-
+                  <React.Fragment>
+                  {this.state.creating && <Backdrop/>}
+                  {this.state.creating && (
+                  <Eventmodel title="Add Event" canCancel canSubmit>
+                  <p>Choose Here</p>
+                  </Eventmodel>)}
+                    
+                
+                  <div className="events_control">
+                  <p>Add Your Sessions Here!!</p>
+                    <button onClick={this.startCreateEventHandler}>Register</button>
+                  </div>
+                  </React.Fragment>
+                
               </div>
            </div>
        </div>
@@ -39,7 +66,7 @@ export default function Details() {
        </>
        );
      }
-
+    }
 
 
 
