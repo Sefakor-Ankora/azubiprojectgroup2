@@ -9,7 +9,9 @@
 
 .event_card label {
   display: block;
-  color: rgb(12, 12, 12);
+  font-size: 15px;
+	color: #838383;
+	line-height: 1.6;
   text-align: left;
 }
  

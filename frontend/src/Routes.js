@@ -9,7 +9,7 @@ import {
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
 import Dashboard from './components/Login/Dashboard';
-import Eventlisting from './components/Login/Eventlisting';
+import Cards from './components/Login/Cards';
 
 
 
@@ -31,8 +31,8 @@ export default function Routes() {
           <Route path="/details">
             <Details />
           </Route>
-          <Route path="/eventlisting">
-            <Eventlisting />
+          <Route path="/cards">
+            <Cards />
           </Route>
           <Route path="/">
             <Landing />
