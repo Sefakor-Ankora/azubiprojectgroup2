@@ -107,7 +107,7 @@ const Landing = () => {
               </main>
 
           <div className="mw6 center">
-            <Link className="f6 dib blue bg-animate hover-bg-blue hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/details">MORE EVENTS</Link>
+            <Link className="f6 dib blue bg-animate hover-bg-blue hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/cards">MORE EVENTS</Link>
           </div>
 
           <div>

@@ -13,11 +13,11 @@ export default function Details() {
      <div>
        <Navbar/>
      </div>
-       <div className="services">
+       <div className="details">
 
-           <div className="service-container">
-            <div className="services-card service-one"></div>
-              <div className="service-description">
+           <div className="details-container">
+            <div className="details-card details-one"></div>
+              <div className="details-description">
                 <h3>Grid Systems.</h3>
                   <div>
                   A grid system is a set of measurements a graphic designer can use to align and size objects within the given format. Although there are a few different categories of grid systems, there are no strict rules on what can or cannot be a grid. It’s up to you. Any guides that help you shape the final design is okay.

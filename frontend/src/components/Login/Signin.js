@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from "axios";
-// import formValidation from 'formvalidation/dist/es6/core/Core';
 import { useForm } from "react-hook-form";
-import Logo from './Logo';
 import { Link } from 'react-router-dom'
 
 
@@ -39,7 +37,7 @@ const onSubmit = values => console.log(values);
 
   return (
     <>
-    <Logo/>
+   
     <form onSubmit={handleSubmit(onSubmit)}>
     
      
