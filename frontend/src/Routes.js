@@ -9,6 +9,8 @@ import {
 import Landing from './components/Login/Landing';
 import Details from './components/Login/Details';
 import Dashboard from './components/Login/Dashboard';
+import Eventlisting from './components/Login/Eventlisting';
+
 
 
 
@@ -28,6 +30,9 @@ export default function Routes() {
           </Route>
           <Route path="/details">
             <Details />
+          </Route>
+          <Route path="/eventlisting">
+            <Eventlisting />
           </Route>
           <Route path="/">
             <Landing />

@@ -5,6 +5,7 @@ import './Landing.css';
 import './Footer.js';
 import Footer from './Footer.js';
 import { Link } from 'react-router-dom'
+import Navbar from "./Navbar.js";
 
 
 const Landing = () => {
@@ -13,17 +14,7 @@ const Landing = () => {
 
     <header className="sans-serif">
     <div className="header">
-    <nav className="flex justify-between flex-grow bb b--black-10">
-  <a className="f15 dib black no-underline pv2 ph4 br-pill flex items-center " href="/">Evently
-  </a>
-  <div className="flex-grow pa3 flex items-center">
-    <Link className="f6 link dib black dim hover-white mr3 mr4-ns" href="#0">Link 1</Link>
-    <Link className="f6 link dib black dim hover-white mr3 mr4-ns" to="/details">Browse Events</Link>
-    <Link className="f6 dib black bg-animate hover-bg-black hover-white no-underline pv2 ph4 br-pill ba b--white-20" to="/signin">Sign In</Link>
-    <Link className="f6 dib black bg-animate hover-bg-black hover-blue no-underline pv2 ph4 br-pill ba b--white-20" to="/signin">Dashboard</Link>
-  </div>
-</nav>
-    
+     <Navbar/>
     <div className='begin'>
       <div className="tc-l mt4 mt5-m mt6-l ph3">
         <h1 className="f2 f1-l fw2 white-90 mb0 lh-title">BUSINESS<br/>CONFERENCE 2020</h1>
