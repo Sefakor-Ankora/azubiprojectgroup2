@@ -3,13 +3,16 @@ import "tachyons";
 import "./Details.css";
 import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
-import Eventmodel from "./Eventmodel.js";
+import Eventmodal from './Eventmodal.js';
 import Backdrop from "./Backdrop.js";
+import Eventcards from "./Eventcards"
 
 
 
 
-// import { Link } from 'react-router-dom'
+
+
+
 
 
 export default class Details extends Component {
@@ -17,11 +20,21 @@ export default class Details extends Component {
     creating: false
   };
 
+  
+
   startCreateEventHandler = () => {
-    this.setState({creating: true});
-  }
+    this.setState({ creating: true });
+  };
+
+  modalSubmitHandler = () => {
+    this.setState({creating: false});
+  };
+  modalCancelHandler = () => {
+    this.setState({creating: false});
+  };
 
   render() {
+    // const {event} = this.props
   return (
      <>
      <div>
@@ -46,14 +59,36 @@ export default class Details extends Component {
                   <React.Fragment>
                   {this.state.creating && <Backdrop/>}
                   {this.state.creating && (
-                  <Eventmodel title="Add Event" canCancel canSubmit>
-                  <p>Choose Here</p>
-                  </Eventmodel>)}
-                    
-                
+                  <Eventmodal title="Add Event" 
+                  canCancel 
+                  canSubmit 
+                  onCancel={this.modalCancelHandler} 
+                  onSubmit={this.modalSubmitHandler}>
+                  <form>
+                    <div className="form-control" >
+                      <label htmlFor="title">Event Name</label>
+                      <input type="text" id="title"></input>
+                    </div>
+                    <div className="form-control" >
+                      <label htmlFor="title">Topic</label>
+                      <input type="text" id="title"></input>
+                    </div>
+                    <div className="form-control" >
+                      <label htmlFor="title">Room Capacity</label>
+                      <input type="number" id="number"></input>
+                      <div className="form-control" >
+                      <label htmlFor="title">Date</label>
+                      <input type="date" id="date"></input>
+                    </div>
+                    </div>
+                  </form>
+                  </Eventmodal>)}
+                     
                   <div className="events_control">
                   <p>Add Your Sessions Here!!</p>
-                    <button onClick={this.startCreateEventHandler}>Register</button>
+                    <button onClick={this.startCreateEventHandler}>
+                    Register
+                    </button>
                   </div>
                   </React.Fragment>
                 

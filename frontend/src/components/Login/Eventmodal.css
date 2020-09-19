@@ -1,4 +1,4 @@
-.model{
+.modal{
     width: 90%;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -6,30 +6,36 @@
     top: 40vh;
     left: 5%;
 }
-.model_header{
+.modal_header{
     padding: 1rem;
     background: #5101d1;
     color: white;
 }
 
-.model_header h1 {
+.modal_header h1 {
     margin: 0;
     font-size: 1.25rem;
 }
 
-.model_content {
+.modal_content {
     padding: 1rem;
 }
 
-.model_actions {
+.modal_actions {
     display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    padding-right: 2rem;
+    font-size: 20px;
 }
 
 @media (min-width: 768px) {
-    .model {
+    .modal {
         width: 30rem;
         left: (calc(100% -30rem) / 2);
     }
+}
+
+.btn{
+    color: rgb(32, 32, 32);
 }
