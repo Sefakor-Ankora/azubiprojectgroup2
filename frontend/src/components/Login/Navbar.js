@@ -11,7 +11,7 @@ export default function Navbar() {
           class="f15 dib black no-underline pv2 ph4 br-pill flex items-center "
           to="/"
         >
-            NEW BREED
+            SimplyEvents
         </Link>
         <div class="flex-grow pa3 flex items-center">
           <Link class="f6 link dib black dim hover-white mr3 mr4-ns" to="/cards">
