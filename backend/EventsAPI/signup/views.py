@@ -18,7 +18,6 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 from .utils import Util
-from django.contrib.auth import authenticate
 
 
 class SignupView(generics.GenericAPIView):
@@ -42,7 +41,7 @@ class SignupView(generics.GenericAPIView):
         data = {'email_body': email_body, 'to_email': user.email,
                 'email_subject': 'Verify your email'}
 
-        # Util.send_email(data)
+        Util.send_email(data)
         return Response(user_data, status=status.HTTP_201_CREATED)
 
 
@@ -75,8 +74,6 @@ class LoginAPIView(generics.GenericAPIView):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-
-        
 
 
 class RequestPasswordResetEmail(generics.GenericAPIView):
