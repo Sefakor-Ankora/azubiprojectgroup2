@@ -5,7 +5,7 @@ import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
 import Eventmodal from './Eventmodal.js';
 import Backdrop from "./Backdrop.js";
-import Eventcards from "./Eventcards"
+// import Eventcards from "./Eventcards"
 
 
 
@@ -59,26 +59,22 @@ export default class Details extends Component {
                   <React.Fragment>
                   {this.state.creating && <Backdrop/>}
                   {this.state.creating && (
-                  <Eventmodal title="Add Event" 
+                  <Eventmodal title="Register" 
                   canCancel 
                   canSubmit 
                   onCancel={this.modalCancelHandler} 
                   onSubmit={this.modalSubmitHandler}>
                   <form>
                     <div className="form-control" >
-                      <label htmlFor="title">Event Name</label>
+                      <label htmlFor="title">Name</label>
                       <input type="text" id="title"></input>
                     </div>
                     <div className="form-control" >
-                      <label htmlFor="title">Topic</label>
-                      <input type="text" id="title"></input>
-                    </div>
-                    <div className="form-control" >
-                      <label htmlFor="title">Room Capacity</label>
-                      <input type="number" id="number"></input>
+                      <label htmlFor="title">Phone Nuumber</label>
+                      <input type="telephone" id="number"></input>
                       <div className="form-control" >
                       <label htmlFor="title">Date</label>
-                      <input type="date" id="date"></input>
+                      <input type="datetime-local" id="date"></input>
                     </div>
                     </div>
                   </form>
