@@ -200,7 +200,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
 EMAIL_HOST_USER = 'sefakor1105@gmail.com'
-EMAIL_HOST_PASSWORD = 'avenja1105'
+EMAIL_HOST_PASSWORD = 'avenja1105' # this is not the best though
 
 
 #EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
