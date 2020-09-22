@@ -8,28 +8,22 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.encoding import smart_str, force_str, smart_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 
-from django.contrib.auth import authenticate
-
 
 class SignupSerializer(serializers.ModelSerializer):
-    confirm_password = serializers.CharField(max_length=68, min_length=6, write_only=True)
+    password = serializers.CharField(
+        max_length=68, min_length=6, write_only=True)
 
     class Meta:
         model = User
-        fields = ['email', 'username', 'firstname', 'lastname', 'city', 'address', 'phonenumber', 'password', 'confirm_password']
+        fields = ['email', 'username', 'password', 'first_name', 'last_name', 'address', 'city']
 
     def validate(self, attrs):
-        # email = attrs.get('email', '')
-        # username = attrs.get('username', '')
+        email = attrs.get('email', '')
+        username = attrs.get('username', '')
 
-        if not attrs.get('username').isalnum():
+        if not username.isalnum():
             raise serializers.ValidationError(
                 'The username should only contain alphanumeric characters')
-
-        if attrs.get('password') != attrs.get('confirm_password'):
-            raise serializers.ValidationError("Passwords do not match")
-
-        del attrs['confirm_password']    
         return attrs
 
     def create(self, validated_data):
@@ -69,15 +63,6 @@ class LoginSerializer(serializers.ModelSerializer):
         email = attrs.get('email', '')
         password = attrs.get('password', '')
 
-        #user = authenticate(username='john', password='secret')
-        #if user is not None:
-        # A backend authenticated the credentials
-           # pass
-        #else:
-        # No backend authenticated the credentials
-
-        
-
         user = auth.authenticate(email=email, password=password)
         if not user:
             raise AuthenticationFailed('Invalid credentials, try again')
@@ -86,13 +71,13 @@ class LoginSerializer(serializers.ModelSerializer):
         if not user.is_verified:
             raise AuthenticationFailed('Email is not verified')
 
-            return {
-            'email': email,
-            'username': username,
+        return {
+            'email': user.email,
+            'username': user.username,
             'tokens': user.tokens
         }
 
-            return super().validate(attrs)
+        return super().validate(attrs)
 
 
 class ResetPasswordEmailRequestSerializer(serializers.Serializer):

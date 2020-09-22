@@ -1,13 +1,40 @@
-import React from "react";
+import React, { Component } from 'react';
 import "tachyons";
 import "./Details.css";
 import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
+import Eventmodal from './Eventmodal.js';
+import Backdrop from "./Backdrop.js";
+// import Eventcards from "./Eventcards"
 
-// import { Link } from 'react-router-dom'
 
 
-export default function Details() {
+
+
+
+
+
+
+export default class Details extends Component {
+  state = {
+    creating: false
+  };
+
+  
+
+  startCreateEventHandler = () => {
+    this.setState({ creating: true });
+  };
+
+  modalSubmitHandler = () => {
+    this.setState({creating: false});
+  };
+  modalCancelHandler = () => {
+    this.setState({creating: false});
+  };
+
+  render() {
+    // const {event} = this.props
   return (
      <>
      <div>
@@ -29,7 +56,38 @@ export default function Details() {
                 <dd className="ml0">Nairobi,Kenya</dd>
                 </dl>
                   </div>
-
+                  <React.Fragment>
+                  {this.state.creating && <Backdrop/>}
+                  {this.state.creating && (
+                  <Eventmodal title="Register" 
+                  canCancel 
+                  canSubmit 
+                  onCancel={this.modalCancelHandler} 
+                  onSubmit={this.modalSubmitHandler}>
+                  <form>
+                    <div className="form-control" >
+                      <label htmlFor="title">Name</label>
+                      <input type="text" id="title"></input>
+                    </div>
+                    <div className="form-control" >
+                      <label htmlFor="title">Phone Nuumber</label>
+                      <input type="telephone" id="number"></input>
+                      <div className="form-control" >
+                      <label htmlFor="title">Date</label>
+                      <input type="datetime-local" id="date"></input>
+                    </div>
+                    </div>
+                  </form>
+                  </Eventmodal>)}
+                     
+                  <div className="events_control">
+                  <p>Add Your Sessions Here!!</p>
+                    <button onClick={this.startCreateEventHandler}>
+                    Register
+                    </button>
+                  </div>
+                  </React.Fragment>
+                
               </div>
            </div>
        </div>
@@ -39,7 +97,7 @@ export default function Details() {
        </>
        );
      }
-
+    }
 
 
 

@@ -2,8 +2,8 @@
     background-color: rgb(82, 174, 248);
     padding: 0;
     border-width: 100px;
-    background-size: cover cover;
-    align-items: flex-end;
+
+    
 }
 .border-box {
     box-sizing: border-box;
@@ -20,7 +20,7 @@
 }
 
 .b--black-20 {
-    border-color: rgba(0, 0, 0, .2);
+    border-color: rgba(0, 0, 0, .8);
 }
 
 .b--black-10 {
@@ -349,4 +349,60 @@
     .f6-l {
         font-size: .875rem;
     }
+}
+
+
+.heart {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff3838;
+    transform: rotate(45deg);
+    animation: heartbeat 1.4s linear infinite;
+    display: flex;
+}
+
+.heart:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #ff3838;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  #ff3838;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1); }
+
+    30% { transform: rotate(45deg) scale(1.4); }
+    50% { transform: rotate(45deg) scale(1.2); }
+
+
+    70% { transform: rotate(45deg) scale(1.4); }
+    100% { transform: rotate(45deg) scale(1); }
+
+
+}
+
+.actions{
+    align-items: center;
+    justify-content: flex-start;
 }
