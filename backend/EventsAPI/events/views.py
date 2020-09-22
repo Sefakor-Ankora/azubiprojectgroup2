@@ -21,6 +21,15 @@ class Events(generics.ListCreateAPIView):
 
 # Create your views here.
 @api_view(['GET','POST'])
+
+def post(self,request):
+    file_model = Events()
+    _, file = request.FILES.popitem()
+    file = file[0]
+    file_model.file = file
+    file_model.save()
+    
+
 def events_list(request):
     if request.method == 'GET':
         events = Events.objects.all()

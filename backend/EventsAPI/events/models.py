@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models import Model
-from ckeditor_uploader.fields import RichTextUploadingField
-from ckeditor.fields import RichTextField
+from PIL import Image
+
 
 
 
@@ -9,9 +9,9 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Events(models.Model):
-    event_name = models.CharField(max_length=50, blank=False, default='')
+    event = models.CharField(max_length=50, blank=False, default='')
     speaker_name = models.CharField(max_length=50, blank=False, default='')
-    topic = RichTextField(null=True, blank=True)
+    topic = models.CharField(max_length=250, blank=False, default='')
     time_scheduled = (
         ('morning', 'Morning'),
         ('midmorning', 'Midmorning'),
@@ -19,8 +19,9 @@ class Events(models.Model):
     )
     schedule = models.CharField(max_length=25, choices=time_scheduled)
     room_capacity = models.CharField(max_length=50, blank=False, default='')
-    description = RichTextUploadingField()
+    description = models.CharField(max_length=250, blank=False, default='')
     date = models.DateTimeField(null=True, blank=True)
+    image = models.ImageField(upload_to = 'media/', null=True, blank=True)
 
 
 
