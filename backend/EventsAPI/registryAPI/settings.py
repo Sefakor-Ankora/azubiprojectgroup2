@@ -41,15 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework', 
-    'rest_framework.authtoken',                              
+    'rest_framework.authtoken', 
+    'PIL',                             
     'signup',
     'corsheaders',
     'rest_auth',
     'drf_yasg',
     'events',
     'register',
-    'ckeditor',
-    'ckeditor_uploader',    
+       
 ]
 
 SWAGGER_SETTINGS = {
@@ -162,23 +162,6 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"
-#CKEDITOR_UPLOAD_PREFIX = "http://media.lawrence.com/media/ckuploads/
-CKEDITOR_CONFIGS = {
-    'awesome_ckeditor': {
-        'toolbar': 'Basic',
-    },
-}
-
-
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'Full',
-        'height': 300,
-        'width': 300,
-    },
-}
 
 CORS_ALLOWED_ORIGINS = [
 
