@@ -91,11 +91,13 @@ export default function Footer() {
             </div>
         </div>
         
-        <div className="db dn-ns">
-            <p className="f7 black-70 mt4 tc">
-            Developed by Donald|Wisdom|Dolly <br/> © Evently 2020
-            </p>
-        </div>
+         
+         <p className="f7 black-100 dib pr3 mb3">
+         <div className="heart"></div>
+          Developed by Donald|Wisdom|Dolly
+          </p>
+       
+        
         </footer>
         </div>
 
