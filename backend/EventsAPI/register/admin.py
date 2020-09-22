@@ -9,4 +9,4 @@ from .models import Register
 
 @admin.register(Register)
 class registerAdmin(admin.ModelAdmin):
-      fields = ('User', 'Events')
+      fields = ('User', 'Programs')

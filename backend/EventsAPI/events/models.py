@@ -1,15 +1,12 @@
 from django.db import models
 from django.db.models import Model
 from PIL import Image
-
-
-
-
+from signup.models import User
 
 # Create your models here.
 
 class Events(models.Model):
-    event = models.CharField(max_length=50, blank=False, default='')
+    title = models.CharField(max_length=50, blank=False, default='')
     speaker_name = models.CharField(max_length=50, blank=False, default='')
     topic = models.CharField(max_length=250, blank=False, default='')
     time_scheduled = (
@@ -24,12 +21,9 @@ class Events(models.Model):
     image = models.ImageField(upload_to = 'media/', null=True, blank=True)
 
 
-
-
 def _str_(self):
-        return self.name
+        return self.title
 
-            
-            
+                   
 class Meta:
         ordering = ('id',)
