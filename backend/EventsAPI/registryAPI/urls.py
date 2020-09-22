@@ -7,11 +7,11 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="EVENTS MGT API",
+        title="EVENTS MANAGEMENT API",
         default_version='v1',
-        description="Test description",
+        description="AZUBI CAPSTONE PROJECT",
         terms_of_service="https://www.ourapp.com/policies/terms/",
-        contact=openapi.Contact(email="contact@evently.local"),
+        contact=openapi.Contact(email="sefakor@outlook.com"),
         license=openapi.License(name="Test License"),
     ),
     public=True,

@@ -129,7 +129,7 @@ class SetNewPasswordAPIView(generics.GenericAPIView):
         return Response({'success': True, 'message': 'Password reset success'}, status=status.HTTP_200_OK)
 
 
-class LogoutView(generics.GenericAPIView):
+class LogoutAPIView(generics.GenericAPIView):
     def logout_view(request):
         logout(request)
     # Redirect to a success page.
