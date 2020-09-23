@@ -9,4 +9,6 @@ from .models import Register
 
 @admin.register(Register)
 class registerAdmin(admin.ModelAdmin):
-      fields = ('user', 'pro')
+      fields = ('username', 'full_name', 'address', 'city')
+      list_display = ('username', 'full_name', 'address', 'city')
+      ordering = ('full_name',)

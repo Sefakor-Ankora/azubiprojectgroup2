@@ -6,14 +6,19 @@ from events.models import Events
 # Create your models here.
 
 class Register(models.Model):
-    
-    pro = models.CharField(max_length=50, blank=False, default='')
-    user = models.CharField(max_length=50, blank=False, default='')
-   
-   
-   # events = models.ForeignKey(Events, on_delete=models.CASCADE, null=True)
-    #user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    
+    username =  models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    full_name = models.CharField(max_length=50, blank=False, default='')
+    address = models.CharField(max_length=50, blank=False, default='')
+    city = models.CharField(max_length=250, blank=False, default='')
+    phone_number = models.CharField(max_length=250, blank=False, default='')
 
-    class Meta:
+    
+    
+   
+   
+def _str_(self):
+        return self.name
+
+                   
+class Meta:
         ordering = ('id',)
