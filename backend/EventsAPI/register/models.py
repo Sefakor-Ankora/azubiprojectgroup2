@@ -7,8 +7,12 @@ from events.models import Events
 
 class Register(models.Model):
     
-    events = models.ForeignKey(Events, on_delete=models.CASCADE, null=True)
-    User = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    pro = models.CharField(max_length=50, blank=False, default='')
+    user = models.CharField(max_length=50, blank=False, default='')
+   
+   
+   # events = models.ForeignKey(Events, on_delete=models.CASCADE, null=True)
+    #user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     
 
     class Meta:
