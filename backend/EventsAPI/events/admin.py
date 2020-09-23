@@ -7,9 +7,9 @@ from .models import Events
 
 @admin.register(Events)
 class EventsAdmin(admin.ModelAdmin):
-      #fields = ('title', 'speaker_name', 'topic', 'description', 'date', 'schedule', 'room_capacity', 'image')
-      list_display = ( 'title', 'date', 'speaker_name', 'topic', 'schedule', 'room_capacity', 'description' )
-      ordering = ('speaker_name',)
+      fields = ('title', 'speaker_name', 'topic', 'description', 'date', 'schedule', 'room_capacity', 'image')
+      list_display = ( 'title', 'date', 'speaker_name', 'topic', 'schedule', 'room_capacity', 'description','image' )
+      ordering = ('title',)
       search_fields = ('speaker_name',)
 
 
