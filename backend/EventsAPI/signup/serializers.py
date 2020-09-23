@@ -15,11 +15,12 @@ class SignupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['email', 'username', 'password', 'first_name', 'last_name', 'address', 'city']
+        fields = ['email', 'username', 'password']
 
     def validate(self, attrs):
         email = attrs.get('email', '')
         username = attrs.get('username', '')
+        
 
         if not username.isalnum():
             raise serializers.ValidationError(
