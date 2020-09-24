@@ -5,11 +5,13 @@ import {
     Route,
   
   } from "react-router-dom";
-  import  Stepforms  from './components/Stepforms';
-import Landing from './components/Login/Landing';
-import Details from './components/Login/Details';
-import Dashboard from './components/Login/Dashboard';
-import Cards from './components/Login/Cards';
+  import  Signin  from './components/Login/Signin';
+  import  Signup  from './components/Login/Signup';
+
+import Landing from './components/Landing/Landing';
+import Details from './components/Details/Details';
+import Dashboard from './components/Dashboard/Dashboard';
+import Cards from './components/Cards/Cards';
 
 
 
@@ -22,8 +24,8 @@ export default function Routes() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/signin">
-            <Stepforms />
+          <Route exact path="/landing">
+            <Landing />
           </Route>
           <Route exact path="/dashboard">
             <Dashboard />
@@ -34,8 +36,11 @@ export default function Routes() {
           <Route path="/cards">
             <Cards />
           </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
           <Route path="/">
-            <Landing />
+            <Signin />
           </Route>
         </Switch>
       </div>

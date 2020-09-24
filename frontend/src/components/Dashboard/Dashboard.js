@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dashboard.css';
-import Navbar from "./Navbar.js";
-import Footer from './Footer';
+import Navbar from "../../components/Navbar/Navbar.js";
+import Footer from '../../components/Footer/Footer';
 import { Link } from 'react-router-dom';
 
 

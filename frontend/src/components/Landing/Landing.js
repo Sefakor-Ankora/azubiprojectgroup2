@@ -1,11 +1,9 @@
 import React from 'react';
 import 'tachyons';
 import './Landing.css';
-// import Container from '@material-ui/core/Container';
-import './Footer.js';
-import Footer from './Footer.js';
-import { Link } from 'react-router-dom'
-import Navbar from "./Navbar.js";
+import Footer from '../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 const Landing = () => {

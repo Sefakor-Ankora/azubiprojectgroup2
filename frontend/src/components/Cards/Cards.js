@@ -2,28 +2,29 @@ import React, { Component } from 'react';
 import {API_BASE_URL} from '../const';
 import axios from 'axios';
 import './Cards.css';
-import Eventcard from "./Eventcards";
-import Navbar from "./Navbar.js";
-import Footer from './Footer';
+// import Eventcard from '../../components/Cards/Eventcards';
+import Navbar from "../../components/Navbar/Navbar.js";
+import Footer from "../../components/Footer/Footer.js";
 
 
 
-export default class Evenlisting extends Component {
+
+export default class Cards extends Component {
     state = {
         events:[]
     }
 
     componentDidMount = () => {
         //get the data list from the backend and set the state
-        axios.get(API_BASE_URL + '/events')
+        axios.get(API_BASE_URL + '/events/')
         .then(response => 
-            // console.log()
+            
 
             {
                 const eventsData = response.data; 
 
-                //now set it in your state
-                this. setState({ ...this.state.events, events: eventsData});
+                
+                this.setState({ ...this.state.events, events: eventsData});
             }
 
 
@@ -32,13 +33,14 @@ export default class Evenlisting extends Component {
     render() {
     return (
         <>
-        <div>
             <Navbar/>
-        </div>
-        <div className="team-row">
-            <h1 className="title">Events Available</h1>
-             <div  className="member">
-                <img src="https://images.unsplash.com/photo-1581091870619-835cee86e759?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="team1" />
+             <h1 className="title">Events Available</h1>
+                 {/* {
+                    this.state.events.map(event => (<Eventcard event={event} />))
+                };  */}
+
+
+                {/* <img src="https://images.unsplash.com/photo-1581091870619-835cee86e759?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="team1" />
                 
                     {
                     this.state.events.map(event => (<Eventcard event={event} />) )
@@ -90,13 +92,13 @@ export default class Evenlisting extends Component {
 		  <img src="https://images.pexels.com/photos/3280211/pexels-photo-3280211.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="team3" />
           {
                     this.state.events.map(event => (<Eventcard event={event} />) )
-                } ;
-		</div>
+                } ; */}
+		{/* </div>
 	  
-        </div>
-        <div>
+        </div> */}
+        
            <Footer/> 
-        </div>
+        
         </>
     )
  }

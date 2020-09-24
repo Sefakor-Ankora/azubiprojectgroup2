@@ -10,7 +10,7 @@ nav{
 .begin{
     background: url(https://www.newstatesman.com/sites/all/themes/creative-responsive-theme/images/new_statesman_events.jpg);
     background-position: center;
-    height: 500px;
+    height: 600px;
     width: 100%;
     padding-top: 5rem; 
     animation: change-bg 20s linear infinite;  
@@ -42,11 +42,11 @@ nav{
     margin: 0;
     padding: 0;
     font-family: verdana;
-    color: #ccc;
+    color: #262626;
     text-transform: uppercase;
     position: relative;
   }
-
+/* 
   h2::before {
       content: "Upcoming Events";
       position: absolute;
@@ -60,7 +60,7 @@ nav{
   
   h2:hover:before {
       width: 100%;
-  }
+  } */
 
 
   h3 {

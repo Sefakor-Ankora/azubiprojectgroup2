@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import "tachyons";
 import "./Details.css";
-import Footer from "./Footer.js";
-import Navbar from "./Navbar.js";
-import Eventmodal from './Eventmodal.js';
-import Backdrop from "./Backdrop.js";
+import Footer from "../../components/Footer/Footer.js";
+import Navbar from '../../components/Navbar/Navbar';
+import Eventmodal from '../../components/Cards/Eventmodal.js';
+import Backdrop from '../../components/Cards/Backdrop';
 // import Eventcards from "./Eventcards"
+import {API_BASE_URL} from '../const';
+import axios from 'axios';
 
 
 
@@ -17,10 +19,23 @@ import Backdrop from "./Backdrop.js";
 
 export default class Details extends Component {
   state = {
-    creating: false
+    creating: false,
+    events: "",
+    user: "",
+    time:""
   };
 
-  
+
+
+handleChange = (e) => {
+  const target  = e.target;
+  console.log('target', target);
+  const value = target.value;
+  const name = target.name;
+  this.setState({[name]: value})
+}
+
+
 
   startCreateEventHandler = () => {
     this.setState({ creating: true });
@@ -28,13 +43,32 @@ export default class Details extends Component {
 
   modalSubmitHandler = () => {
     this.setState({creating: false});
+    // console.log("you want to book an event")
+  const url = API_BASE_URL + "/register/";
+    // const formData = {
+    //   fullname: this.state.fullname,
+    //   phonenumber: this.state.phonenumber,
+    //   email: this.state.email,
+    //   ticketnumber: this.state.ticketnumber,
+    //   time: this.state.time
+    // };
+
+    const fdt = {
+      events:3,
+      user: 45,
+     time: this.state.time
+
+    }
+
+
+    axios.post(url,  fdt).then(response => console.log(response)) 
   };
   modalCancelHandler = () => {
     this.setState({creating: false});
   };
 
   render() {
-    // const {event} = this.props
+    
   return (
      <>
      <div>
@@ -65,17 +99,15 @@ export default class Details extends Component {
                   onCancel={this.modalCancelHandler} 
                   onSubmit={this.modalSubmitHandler}>
                   <form>
-                    <div className="form-control" >
-                      <label htmlFor="title">Name</label>
-                      <input type="text" id="title"></input>
-                    </div>
-                    <div className="form-control" >
-                      <label htmlFor="title">Phone Nuumber</label>
-                      <input type="telephone" id="number"></input>
+                    
                       <div className="form-control" >
-                      <label htmlFor="title">Date</label>
-                      <input type="datetime-local" id="date"></input>
-                    </div>
+                      {/* <label htmlFor="time">Time</label>
+                      <input type="text" name="time" id="time" value={this.state.time} onChange={this.handleChange}></input> */}
+                       <select name="time" onChange={this.handleChange}>
+                        <option value="Morning">Morning</option>
+                        <option value="midmorning">Mid Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                      </select> 
                     </div>
                   </form>
                   </Eventmodal>)}
