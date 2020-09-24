@@ -15,8 +15,8 @@ const Landing = () => {
           <Navbar/>
           <div className='begin'>
             <div className="tc-l mt4 mt5-m mt6-l ph3">
-              <h3 className="f2 f1-l fw2 white-90 mb0 lh-title">BUSINESS<br/>CONFERENCE 2020</h3>
-              <h6 className="f4 no-underline dib v-mid bg-blue white b--blue ph3 pv2 mb3">September 30,2020- 8am-6pm</h6><br/>
+              <h1 className="f2 f1-l fw2 white-90 mb0 lh-title">BUSINESS<br/>CONFERENCE 2020</h1>
+              <h2 className="f4 no-underline dib v-mid bg-blue white b--blue ph3 pv2 mb3">September 30,2020- 8am-6pm</h2><br/>
               <Link className="f6 no-underline grow dib v-mid bg-white black ba b--white ph3 pv2 mb3" to="/">Get ticket</Link>
             </div>
             </div>

@@ -40,7 +40,7 @@ export default function Routes() {
             <Signup />
           </Route>
           <Route path="/">
-            <Signin />
+            <Signin/>
           </Route>
         </Switch>
       </div>

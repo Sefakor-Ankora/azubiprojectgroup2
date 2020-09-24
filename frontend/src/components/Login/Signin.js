@@ -33,11 +33,22 @@ const onSubmit = values => {
 
   return (
     <div className="start">
+    <ul>
+      <li>W</li>
+      <li>E</li>
+      <li>L</li>
+      <li>C</li>
+      <li>O</li>
+      <li>M</li>
+      <li>E</li>
+      <li>T</li>
+      <li>O</li>
+    </ul>
    
     <form onSubmit={handleSubmit(onSubmit)}>
     
      
-       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+       <article className="br5 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-3 center">
         <main className="pa4 black-80">
           <div className="measure">
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -80,7 +91,7 @@ const onSubmit = values => {
                 />
               </div>
               {errors.password && errors.password.message}     
-            
+              <label className="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"/>Remember me</label>
             </fieldset>
             <div className="">
               {/* <Link to = "/landing"> */}
@@ -96,10 +107,10 @@ const onSubmit = values => {
             <div className="lh-copy mt3">
             <p>Don't have an Account?</p>
             </div>
-            <div>
+            <div className="mt3">
             <Link to = "/signup">
               <input
-                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 "
                 type="Signup"
                 value="Signup"
               />
