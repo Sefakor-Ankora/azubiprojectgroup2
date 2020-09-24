@@ -17,6 +17,8 @@ ul li {
     font-size: 50px;
     letter-spacing: 15px;
     animation: lighting 1.4s linear infinite;
+    text-transform: uppercase;
+
 }
 
 @keyframes lighting {
@@ -64,6 +66,44 @@ ul li:nth-child(8) {
 ul li:nth-child(9) {
     animation-delay: 0.8s;
 }
+
+span:before {
+    font-size: 50px;
+    content: "AZUBI Event Page";
+    color: #b1aff8;
+    font-family: arial;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    /* animation: word-switch 8.5ss infinite; */
+    animation: lighting 1.4s linear infinite;
+    
+}
+
+/* @keyframes word-switch {
+    0% { content: "azubi"; }
+
+    50% { content: "events"; }
+
+    100% { content: "page"; }
+
+
+} */
+
+@keyframes lighting {
+    0% {color: #484848;
+    text-shadow: none; }
+
+    90% {color: #484848;
+        text-shadow: none; }
+
+    100% {color: #fff900;
+            text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00; }
+}
+
+
+
+
+
 
 .center {
     display: flex;
