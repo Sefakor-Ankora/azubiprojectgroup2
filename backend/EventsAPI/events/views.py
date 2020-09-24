@@ -3,12 +3,14 @@ from django.shortcuts import render
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-
 from events.models import Events
 from events.serializers import Events
 from rest_framework.decorators import api_view
 from rest_framework import generics
 from .serializers import EventsSerializer
+from django.http import HttpResponse
+from rest_framework.response import Response
+from rest_framework import viewsets,generics,permissions
 
 
 
@@ -17,9 +19,19 @@ class Events(generics.ListCreateAPIView):
     queryset = Events.objects.all()
     serializer_class = EventsSerializer
     
-
-
 # Create your views here.
+def post(self,request):
+    file_model = Events()
+    _, file = request.FILES.popitem()
+    file = file[0]
+    file_model.file = file
+    file_model.save()
+
+    #return HttpResponse(content_type='text/plain', content='Event added')
+
+
+
+
 @api_view(['GET','POST'])
 def events_list(request):
     if request.method == 'GET':
